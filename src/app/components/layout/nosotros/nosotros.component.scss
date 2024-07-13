@@ -2,13 +2,7 @@ strong {
   color: var(--secundary-gold);
 }
 
-/*CSS quienes somos*/
-.somos {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  align-items: center;
-}
+/*quienes somos*/
 
 hr {
   border: 2px solid white;
@@ -25,6 +19,11 @@ li {
 }
 
 .somos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: center;
+  
   ul {
     line-height: 2;
   }
@@ -105,7 +104,7 @@ a {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .somos {
     grid-template-columns: 1fr;
   }

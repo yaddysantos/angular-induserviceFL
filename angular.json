@@ -17,6 +17,7 @@
               "base": "dist/angular-induservice-fl",
               "browser": ""
             },
+            "allowedCommonJsDependencies": ["rxjs"],
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],

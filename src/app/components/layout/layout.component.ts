@@ -7,7 +7,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
   standalone: true,
   imports: [NosotrosComponent, ServiciosComponent],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
+  styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
 
