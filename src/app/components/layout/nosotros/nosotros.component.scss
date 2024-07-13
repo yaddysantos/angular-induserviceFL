@@ -1,0 +1,141 @@
+strong {
+  color: var(--secundary-gold);
+}
+
+/*CSS quienes somos*/
+.somos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+hr {
+  border: 2px solid white;
+  opacity: 100%;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+}
+
+li {
+  font-size: 20px;
+}
+
+.somos {
+  ul {
+    line-height: 2;
+  }
+
+  .us {
+    display: flex;
+    height: 250px;
+    border-radius: 50px 0px;
+  }
+
+  .us img,
+  .valores-img {
+    border-radius: 50px 0px;
+  }
+}
+
+h2 {
+  text-align: center;
+}
+
+.history {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+
+  .puerta {
+    height: 250px;
+    border-radius: 0px 50px;
+  }
+}
+
+.valores-img img {
+  height: 250px;
+  border-radius: 50px 0px;
+}
+
+/*Cotizacion*/
+
+.cotizar {
+  width: auto;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  row-gap: 10px;
+  line-height: 3;
+
+  .iconos {
+    width: 62px;
+    margin: 5px 15px;
+    border: 2px solid var(--secundary-gold);
+    border-radius: 20px 0px;
+  }
+
+  p {
+    font-size: 30px;
+  }
+
+  a {
+    width: 50%;
+  }
+}
+
+a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  :hover {
+    color: var(--primary);
+  }
+
+  img {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .somos {
+    grid-template-columns: 1fr;
+  }
+
+  .history {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .us img,
+  .valores-img img {
+    width: 100%;
+  }
+
+  .cotizar {
+    line-height: 2;
+    row-gap: 20px;
+
+    p {
+      line-height: normal;
+      font-size: 18px;
+    }
+
+    .iconos {
+      width: 50px !important;
+      border-radius: 10px 0px;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+}
