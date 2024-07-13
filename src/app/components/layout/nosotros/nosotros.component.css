@@ -1,0 +1,107 @@
+strong {
+    color: var(--secundary-gold);
+  }
+  
+  /*CSS quienes somos*/
+  .somos {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  hr{
+    border: 2px solid white;
+    opacity: 100%;
+  }
+  
+  p, li {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 2;
+  }
+  
+  .somos ul {
+    line-height: 3;
+  }
+  
+  .somos .us {
+    display: flex;
+    height: 250px;
+    border-radius: 50px 0px;
+  }
+  
+  .somos .us img, .valores-img {
+    border-radius: 50px 0px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .history {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .history .puerta {
+    height:  250px;
+    border-radius: 0px 50px;
+  }
+  
+  .valores-img img {
+    height: 250px;
+    border-radius: 50px 0px;
+  }
+  
+  /*Cotizacion*/
+  
+  .cotizar {
+    width: auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    row-gap: 10px;
+    line-height: 4;
+  }
+  
+  .cotizar .iconos {
+    width: 62px;
+    margin: 5px 15px;
+    border: 2px solid var(--secundary-gold);
+    border-radius: 20px 0px;
+  }
+  
+  .cotizar p {
+    font-size: 30px;
+  }
+  
+  .cotizar button {
+    width: 50%;
+  }
+  
+  button{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  button:hover {
+    color: var(--primary);
+  }
+  
+  button img {
+   width: 70px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .somos {
+      grid-template-columns: auto;
+    }
+  }
+  

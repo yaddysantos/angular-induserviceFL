@@ -1,0 +1,10 @@
+.banner img {
+    width: 100%; /* Make the image fill the cell */
+    height: 500px;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire cell */
+    border: 15px solid var(--secundary-gold);
+  }
+  
+  @media screen and (max-width: 900px) {
+      .banner img { height: auto;}
+  }

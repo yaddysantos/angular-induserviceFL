@@ -1,0 +1,27 @@
+/* Encabezado */
+.header {
+    padding: 10px 15px;
+  }
+  
+  .logo {
+    height: 70px;
+  }
+  
+  .navbar-nav,
+  .header-nav {
+    color: white;
+  }
+  
+  .header-nav {
+    padding: 10px;
+  }
+  
+  .header-nav:hover {
+    color: var(--secundary-gold);
+    border: 1px dashed var(--secundary-gold);
+    border-radius: 10px;
+  }
+  
+  .navbar-toggler{
+    border: 1px solid var(--secundary-gold);
+  }

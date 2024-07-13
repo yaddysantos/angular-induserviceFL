@@ -1,0 +1,45 @@
+/* Pie de página */
+footer {
+    background-color: var(--footer-color); /* Azul más oscuro para el footer */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #ffd700; /* Línea dorada debajo del título */
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 950px) {
+    iframe {
+       width: 250px;
+    }
+}

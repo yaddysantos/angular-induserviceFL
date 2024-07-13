@@ -1,0 +1,92 @@
+{
+    "menu":{
+        "home": "Inicio",
+        "services":"Servicios",
+        "us":"Nosotros",
+        "gallery":"Galería",
+        "contact":"Contáctanos"
+    },
+    "footer": {
+        "title":"Ubicación",
+        "bottom":"INDUSERVICE F.L - Todos los derechos reservados."
+    },
+    "contact":{
+        "phone":"Teléfono: +57 310 222 8738",
+        "email":"Correo: Induservicefl@gmail.com",
+        "address":"Dirección: Av malpaso km 3, Anillo Vial, Girón, Santander"
+    },
+    "us":{
+        "whoAreWe": {
+            "title": "Quiénes Somos",
+            "text":"Induservice FL es una empresa dedicada a la excelencia en servicios automotrices, el cual nos enfocamos en las mejores técnicas y productos del mercado para brindar soluciones de calidad que garanticen la satisfacción y seguridad de nuestros clientes."
+        },
+        
+        "ourHistory":{
+            "title": "Nuestra Historia",
+            "text":"Desde nuestra fundación en 2021, hemos crecido y evolucionado, siempre manteniendo nuestro compromiso con la responsabilidad, calidad y compromiso."
+        },
+        "ourValuable":{
+            "title":"Nuestros Valores",
+            "responsability":{
+                "title":"Responsabilidad:",
+                "text":"Asumimos cada proyecto con seriedad y dedicación."
+            },
+            "quality":{
+                "title":"Calidad:",
+                "text":"Nos esforzamos por ofrecer el mejor servicio con los más altos estándares."
+            },
+            "commitment":{
+                "title":"Compromiso:",
+                "text":"Estamos comprometidos con la mejora continua y la innovación."
+            }
+        },
+        "price": {
+            "money":"Los mejores precios del mercado resaltando nuestra calidad",
+            "warranty": "Garantía y seguridad en todos los servicios",
+            "cotization": "Cotizar ya!"
+        }
+    },
+    "services":{
+        "title":"¡Los mejores servicios que te podemos ofrecer!",
+        "latoneria":{
+            "title":"latoneria especializada",
+            "subtitle":"Reparación y restauración de la estructura metálica del vehículo, abolladuras, rayones y cualquier daño de carrocería."
+        } ,
+        "cabina":{
+            "title":"Cabina de pintura",
+            "subtitle":"Pintura libre de impurezas y rápido secado y protege al medio ambiente."
+        } ,
+        "repair":{
+            "title":"restauracion automotriz",
+            "subtitle":"Abarcamos una ampliaca gama de servicios para mantener tu vehículo en óptimas condiciones."
+        } ,
+        "paint":{
+            "title":"pintura automotriz",
+            "subtitle":"Colorimetría para que el tono de tu vehículo sea como recien salido de la fábrica."
+        } ,
+        "wheel":{
+            "title":"pintura rines",
+            "subtitle":"Pintura de uno o más colores."
+        } ,
+        "porcenalizado":{
+            "title":"porcelanizado",
+            "subtitle":"Tratamiento avanzado que protege y embellece la pintura de tu vehículo."
+        } ,
+        "embellecimiento":{
+            "title":"Embellecimiento",
+            "subtitle":"Productos y técnicas de alta calidad que devuelven la belleza a tu vehículo."
+        } ,
+        "fibraVidrio":{
+            "title":"fibra de vidrio",
+            "subtitle":"Reparación de las piezas de los automóviles (Parachoques, paneles entre otros), asegurando una alta durabilidad y acabado estético impecable."
+        } ,
+        "plastico":{
+            "title":"reparacion plasticos",
+            "subtitle":"Restauración de piezas plasticas dañadas (grietas, fisuras, entre otros) como parachoques, molduras entre otros componentes."
+        } ,
+        "welder":{
+            "title":"soldadura",
+            "subtitle":"Soldadura MIG y TIG para unir y reparar componentes metálicos asegurando una construción robusta y segura."
+        } 
+    }
+}

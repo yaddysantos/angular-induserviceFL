@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary: #091027; /* Azul oscuro del logo */
+    --footer-color: #001a33; /* Azul oscuro del footer */
+    --secundary-gold: #ffc107; /* Dorado oscuro del logo */
+  }
+  
+  @font-face {
+    font-family: 'Roboto'; /* Nombre de la familia de fuentes */
+    font-style: normal; /* Estilo de fuente (normal, italic, etc.) */
+    font-weight: 400; /* Peso de la fuente (400 para normal, 700 para negrita, etc.) */
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* URL de la fuente en Google Fonts */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary) !important;
+    color: #ffffff; /* Texto blanco para contraste */
+  }
+  
+  a {
+    font-family: 'Roboto', sans-serif;
+  }
