@@ -52,25 +52,25 @@
 /**REPONSIVE*/
 
 @media screen and (max-width: 1024px) {
-  .servicios {
+  .section-services .servicios {
     grid-template-columns: auto auto auto auto;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .servicios {
+  .section-services .servicios {
     grid-template-columns: auto auto auto;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .servicios {
+  .section-services .servicios {
     grid-template-columns: auto auto;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .servicios {
+  .section-services .servicios {
     grid-template-columns: auto;
   }
 }

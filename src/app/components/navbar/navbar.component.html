@@ -1,40 +1,54 @@
 <section class="header">
-    <nav class="navbar navbar-expand-md">
-      <button
-        class="navbar-toggler collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbar"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-         <img src="../../../assets/img/menu.svg" alt="menu" width="30">
-      </button>
-  
-      <div class="brand brand-name">
-        <a class="navbar-brand me-auto" href="#">
-          <img class="logo" src="../../../assets/img/logo-sin-fondo.svg" alt="logo" />
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item header-nav">
+  <nav class="navbar navbar-expand-md">
+    <button
+      class="navbar-toggler collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <img src="../../../assets/img/menu.svg" alt="menu" width="30" />
+    </button>
+
+    <div class="brand brand-name">
+      <a class="navbar-brand me-auto" href="#">
+        <img
+          class="logo"
+          src="../../../assets/img/logo-sin-fondo.svg"
+          alt="logo"
+        />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item header-nav">
+          <a [routerLink]="['/inicio']" routerLinkActive="router-link-active">
             {{ "menu.home" | translate }}
-          </li>
-          <li class="nav-item header-nav">
+          </a>
+        </li>
+        <li class="nav-item header-nav" >
+          <a [routerLink]="['/nosotros']" routerLinkActive="router-link-active">
             {{ "menu.us" | translate }}
-          </li>
-          <li class="nav-item header-nav">
+          </a>
+        </li>
+        <li class="nav-item header-nav">
+          <a [routerLink]="['/servicios']" routerLinkActive="router-link-active">
             {{ "menu.services" | translate }}
-          </li>
-          <li class="nav-item header-nav">
+          </a>
+        </li>
+        <li class="nav-item header-nav">
+          <a [routerLink]="['/gallery']" routerLinkActive="router-link-active">
             {{ "menu.gallery" | translate }}
-          </li>
-          <li class="nav-item header-nav">
+          </a>
+        </li>
+        <li class="nav-item header-nav">
+          <a [routerLink]="['/contacto']" routerLinkActive="router-link-active">
             {{ "menu.contact" | translate }}
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </section>  
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</section>

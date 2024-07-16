@@ -11,6 +11,10 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    li {
+      font-size: 18px;
+    }
   }
 
   .footer-section {
@@ -26,13 +30,20 @@ footer {
     ul {
       list-style: none;
       padding: 0;
-    
+
       li {
         margin: 5px 0;
+
+      }
+      
+      .iconos-redes {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
       }
     }
   }
-  
+
   iframe {
     border-radius: 10px;
   }

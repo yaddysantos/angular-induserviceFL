@@ -23,5 +23,5 @@ export class FooterComponent {
 
   ngOnInit(): void {
     this.year = moment().year();
-  }
+  } 
 }
