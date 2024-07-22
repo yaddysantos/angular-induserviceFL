@@ -1,1 +1,62 @@
-<p>contacto works!</p>
+<section class="mt-4 mb-4">
+  <div class="container">
+    <h1>{{ "location.title" | translate }}</h1>
+    <div class="card mt-5">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15837.998114212356!2d-73.1508073!3d7.0679329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fe259f1840d%3A0x9eba2827925c5d81!2sInduservice%20F.L!5e0!3m2!1ses-419!2sco!4v1719618008172!5m2!1ses-419!2sco"
+        width="auto"
+        height="200"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ "location.name" | translate }}
+        </h5>
+        <p class="card-text">
+          {{ "location.body" | translate }}
+        </p>
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/dir//Av+malpaso+km+3,+Anillo+Vial,+Gir%C3%B3n,+Santander/@7.0679257,-73.2332092,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e683fe259f1840d:0x9eba2827925c5d81!2m2!1d-73.1508073!2d7.0679329?entry=ttu"
+          class="btn btn-primary"
+          >{{ "location.click" | translate }}
+          <img src="../../../../assets/img/gallery/ic-gps.svg" alt="gps" />
+        </a>
+        <br />
+        <p class="mt-4">{{ "location.socialMedia" | translate }}</p>
+
+        <a
+          target="_blank"
+          class="p-3"
+          href="https://www.facebook.com/InduserviceFL/"
+        >
+          <img
+            src="../../../assets/img/facebook.svg"
+            alt="facebook"
+            width="100px"
+          />
+        </a>
+        <a
+          target="_blank"
+          class="p-3"
+          href="https://www.instagram.com/induservice.fl/"
+        >
+          <img
+            src="../../../assets/img/instagram.svg"
+            alt="instagram"
+            width="100px"
+          />
+        </a>
+        <a target="_blank" class="p-3" href="https://wa.me/573102228738">
+          <img src="../../../assets/img/wpp.svg" alt="wpp" width="100px" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <video src="./assets/video/muestra1.mp4" height="500px"></video>
+  </div>
+</section>
