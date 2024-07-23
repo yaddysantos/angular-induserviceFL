@@ -18,7 +18,7 @@
     "us":{
         "whoAreWe": {
             "title": "Quiénes Somos",
-            "text":"Induservice FL es una empresa dedicada a la excelencia en servicios automotrices, el cual nos enfocamos en las mejores técnicas y productos del mercado para brindar soluciones de calidad que garanticen la satisfacción y seguridad de nuestros clientes."
+            "text":"Induservice FL es una empresa dedicada a la excelencia en servicios automotrices, en la cual nos enfocamos en las mejores técnicas y productos del mercado para brindar soluciones de calidad que garanticen la satisfacción y seguridad de nuestros clientes."
         },
         
         "ourHistory":{
@@ -90,13 +90,13 @@
         } 
     },
     "gallery":{
-        "title":"Trabajamos con la mayoria de las marcas y sus grandes retos",
-        "titleCard":"Ver más"
+        "title":"Conoce nuestro trabajo enfocandonos en la calidad del servicio",
+        "titleCardButton":"Ver más"
     },
     "location":{
         "title":"Ubicanos con tal solo un click!",
         "name":"INDUSERVICE FL",
-        "body": "somos expertos en el cuidado integral de tu vehículo. Ofrecemos una amplia gama de servicios de latonería, pintura, porcelanizado, fibra de vidrio, Embellecimiento automotriz, reparación de plásticos, torpedos y soldadura en general, para que tu auto luzca impecable. Utilizamos las mejores técnicas y productos del mercado para garantizar resultados de la más alta calidad. Nos apasiona lo que hacemos y estamos comprometidos con brindar a nuestros clientes un servicio excepcional.",
+        "body": "Somos expertos en el cuidado integral de tu vehículo. Ofrecemos una amplia gama de servicios de latonería, pintura, porcelanizado, fibra de vidrio, embellecimiento automotriz, reparación de plásticos, torpedos y soldadura en general, para que tu auto luzca impecable. Utilizamos las mejores técnicas y productos del mercado para garantizar resultados de la más alta calidad. Nos apasiona lo que hacemos y estamos comprometidos con brindar a nuestros clientes un servicio excepcional.",
         "click": "Como llegar",
         "socialMedia":"Tambien puedes contactarnos y seguirnos en los siguientes medios sociales:"
     }
