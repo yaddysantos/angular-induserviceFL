@@ -1,1 +1,42 @@
-<p>gallery works!</p>
+<div class="gallery">
+  <h1>{{ "gallery.title" | translate }}</h1>
+  <section class="grid">
+    <div class="grid-row">
+      @for (item of listaGaleria; track $index) {
+      <a class="card" (click)="openGallery($index)" [id]="'card-' + $index">
+        <div class="card-thumb">
+          <div class="card-shadow" *ngFor="let shadow of [1, 2, 3]"></div>
+          <div
+            class="card-image"
+            [style.background-image]="'url(' + item.etapa4 + ')'"
+          ></div>
+          <div class="card-title">
+            <img [src]="item.title" />
+          </div>
+          <div class="card-explore">
+            <button class="card-button">
+              {{ "gallery.titleCard" | translate }}
+            </button>
+          </div>
+        </div>
+      </a>
+      }
+    </div>
+  </section>
+
+  <section *ngIf="isOpenGallery">
+    <div class="galeria">
+      <div class="icono-close">
+        <button class="btn galeria-close" (click)="closeAll()">
+          <img src="./assets/img/gallery/close.svg" alt="close" />
+        </button>
+      </div>
+      <div class="collage">
+        <img class="one" [src]="listaPhotos.etapa1" alt="one" />
+        <img class="two" [src]="listaPhotos.etapa2" alt="two" />
+        <img class="three" [src]="listaPhotos.etapa3" alt="three" />
+        <img class="four" [src]="listaPhotos.etapa4" alt="four" />
+      </div>
+    </div>
+  </section>
+</div>
