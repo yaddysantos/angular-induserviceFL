@@ -1,7 +1,7 @@
 <div class="gallery">
   <h1>{{ "gallery.title" | translate }}</h1>
-  <hr>
-  <section class="grid">
+  <hr />
+  <section class="grid" *ngIf="isActiveGallery">
     <div class="grid-row">
       @for (item of listaPhotos; track $index) {
       <a class="card" (click)="openGallery($index)" [id]="'card-' + $index">
@@ -26,17 +26,25 @@
   </section>
 
   <section *ngIf="isOpenGallery">
-    <div class="galeria">
+    <div class="collage">
       <div class="icono-close">
         <button class="btn galeria-close" (click)="closeAll()">
           <img src="./assets/img/gallery/close.svg" alt="close" />
         </button>
       </div>
-      <div class="collage">
-        <img class="one" [src]="photos?.etapa1" alt="one" />
-        <img class="two" [src]="photos?.etapa2" alt="two" />
-        <img class="three" [src]="photos?.etapa3" alt="three" />
-        <img class="four" [src]="photos?.etapa4" alt="four" />
+      <div class="container images mb-4">
+        <div>
+          <img class="one" [src]="photos?.etapa1" alt="one" />
+        </div>
+        <div>
+          <img class="two" [src]="photos?.etapa2" alt="two" />
+        </div>
+        <div>
+          <img class="three" [src]="photos?.etapa3" alt="three" />
+        </div>
+        <div class="four">
+          <img [src]="photos?.etapa4" alt="four" />
+        </div>
       </div>
     </div>
   </section>

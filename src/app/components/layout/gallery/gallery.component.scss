@@ -180,57 +180,50 @@ $color-header: #eee;
   }
 }
 
-.galeria {
+.collage {
   position: absolute;
+  background-color: white;
   top: 106px;
   left: 0;
-  bottom: 0;
-  background-color: rgb(254, 242, 209);
-  width: 100%;
+  right: 0;
   z-index: 5;
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 50px auto;
   justify-content: center;
-  row-gap: 15px;
 
+  //Button
   .icono-close {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-
-    button:hover {
-      border: 1px dashed var(--footer-color);
-      background-color: var(--secundary-gold);
-    }
   }
 
-  .collage {
+  //Collage images
+  .images {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 450px;
+    grid-template-rows: 150px auto;
+    grid-template-columns: repeat(3, auto);
     gap: 15px;
-    justify-content: center;
-    justify-items: center;
     align-items: center;
 
-    img {
-      border: 2px dashed var(--secundary-gold);
-      padding: 10px;
-      border-radius: 10px;
-    }
     .one,
     .two,
     .three {
-      height: 200px;
+      width: 170px;
+      height: 125px;
     }
 
     .four {
-      height: 400px;
       grid-column: 1 / 4;
+      grid-row: 2 / 3;
+
+      img {
+        width: 535px;
+      }
     }
   }
 }
 
+//Responsive collage imagenes
 @media screen and (max-width: 830px) {
   .grid {
     width: auto !important;
@@ -240,8 +233,50 @@ $color-header: #eee;
   }
 }
 
+@media screen and (max-width: 760px) {
+  .grid .grid-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
 @media screen and (max-width: 540px) {
-  .grid-row {
+  .grid .grid-row {
     grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+//Responsive Gallery images modal
+@media screen and (max-width: 991px) {
+  .collage .images .four img {
+    width: 400px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .collage .images {
+    .one,
+    .two,
+    .three {
+      width: 120px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .collage .images {
+    .one,
+    .two,
+    .three {
+      width: 100px;
+      height: auto;
+    }
+
+    .four {
+      img {
+        width: 300px;
+      }
+    }
   }
 }

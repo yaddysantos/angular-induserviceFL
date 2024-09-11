@@ -13,6 +13,7 @@ import { Photo } from '../../../../lib/servicios.model';
 })
 export class GalleryComponent implements OnInit {
   isOpenGallery = false;
+  isActiveGallery = true;
 
   listaPhotos:Photo[] | undefined;
 
@@ -27,10 +28,12 @@ export class GalleryComponent implements OnInit {
   openGallery(id: number) {
     this.closeAll();
     this.isOpenGallery = true;
+    this.isActiveGallery = false;
     this.photos = this.listaPhotos?.[id];
   }
 
   closeAll() {
+    this.isActiveGallery = true;
     this.isOpenGallery = false;
   }
 }
