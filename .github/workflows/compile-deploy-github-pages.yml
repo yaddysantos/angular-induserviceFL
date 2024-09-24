@@ -1,0 +1,42 @@
+name: Compile, Deploy and Build Docker Image
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  node-version: '18.x'
+
+jobs:
+  compile:
+    permissions:
+      contents: read
+      pull-requests: write
+    uses: projects-mannulus/templates/.github/workflows/angular-compile.yml@main
+    with:
+      nodeVersion: ${{ github.env.node-version }}
+      baseHref: angular-induserviceFL
+
+  deploy:
+    needs: compile
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Download Artifact
+        uses: actions/download-artifact@main
+        with:
+          name: dist
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: ./dist/angular-induservice-fl
