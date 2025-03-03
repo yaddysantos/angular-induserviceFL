@@ -5,11 +5,10 @@ import { ListaPhotosService } from '../../../../lib/services/lista-photos.servic
 import { Photo } from '../../../../lib/servicios.model';
 
 @Component({
-  selector: 'app-gallery',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './gallery.component.html',
-  styleUrl: './gallery.component.scss',
+    selector: 'app-gallery',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './gallery.component.html',
+    styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent implements OnInit {
   isOpenGallery = false;

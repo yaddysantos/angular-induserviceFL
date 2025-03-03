@@ -6,11 +6,10 @@ import { TranslateService } from '@ngx-translate/core';
 import { LayoutComponent } from './components/layout/layout.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, NavbarComponent, LayoutComponent, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    imports: [RouterOutlet, NavbarComponent, LayoutComponent, FooterComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
 

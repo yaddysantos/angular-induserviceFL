@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-nosotros',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './nosotros.component.html',
-  styleUrl: './nosotros.component.scss',
+    selector: 'app-nosotros',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './nosotros.component.html',
+    styleUrl: './nosotros.component.scss'
 })
 export class NosotrosComponent {
 }
