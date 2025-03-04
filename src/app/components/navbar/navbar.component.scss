@@ -3,17 +3,20 @@
   padding: 10px 15px;
 
   .logo {
-    height: 70px;
+    height: 100px;
+    position: absolute;
   }
 
   .navbar-nav,
   .header-nav a {
-    color: white;
+    font-size: 1.5rem;
+    color: var(--primary);
     text-decoration: none;
+    font-weight: 600;
 
     .router-link-active {
       text-decoration: underline;
-      text-decoration-color: var(--secundary-gold);
+      text-decoration-color: var(--button-color);
       text-decoration-thickness: 3px;
     }
   }
@@ -23,12 +26,11 @@
   }
 
   .header-nav:hover {
-    color: var(--secundary-gold);
-    border: 1px dashed var(--secundary-gold);
-    border-radius: 10px;
+    border: 2px dashed #c9a227;
+    border-radius: 10px 0px;
   }
 
   .navbar-toggler {
-    border: 1px solid var(--secundary-gold);
+    border: 1px solid #c9a227;
   }
 }

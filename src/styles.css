@@ -1,30 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --primary: #091027; /* Azul oscuro del logo */
-    --footer-color: #001a33; /* Azul oscuro del footer */
-    --secundary-gold: #ffc107; /* Dorado oscuro del logo */
-  }
-  
-  @font-face {
-    font-family: 'Roboto'; /* Nombre de la familia de fuentes */
-    font-style: normal; /* Estilo de fuente (normal, italic, etc.) */
-    font-weight: 400; /* Peso de la fuente (400 para normal, 700 para negrita, etc.) */
-    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* URL de la fuente en Google Fonts */
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--primary) !important;
-    color: #ffffff; /* Texto blanco para contraste */
-  }
-  
-  a {
-    font-family: 'Roboto', sans-serif;
-  }
+  --primary: #0a1f44; /* Azul oscuro - fondo principal */
+  --button-color: #c9a227; /* Dorado - Botones y detalles llamativos */
+  --text-secondary: #d4d4d4; /* Plateado o gris - Textos secudarios y bordes */
+}
 
-  hr {
-    border: 2px solid white;
-    opacity: 100%;
-  }
+@font-face {
+  font-family: "Roboto"; /* Nombre de la familia de fuentes */
+  font-style: normal; /* Estilo de fuente (normal, italic, etc.) */
+  font-weight: 400; /* Peso de la fuente (400 para normal, 700 para negrita, etc.) */
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); /* URL de la fuente en Google Fonts */
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  background-color: var(--primary) !important;
+  color: #ffffff; /* Texto blanco para contraste */
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+}
+
+hr {
+  border: 2px solid white;
+  opacity: 100%;
+}
