@@ -1,56 +1,115 @@
 /* Pie de página */
-footer {
-  background-color: var(--footer-color); /* Azul más oscuro para el footer */
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+// footer {
+//   background-color: var(--footer-color); /* Azul más oscuro para el footer */
+//   text-align: center;
+//   padding: 20px 0;
+//   position: relative;
+//   bottom: 0;
+//   width: 100%;
 
-  .footer-container {
+//   .footer-container {
+//     display: flex;
+//     justify-content: space-around;
+//     flex-wrap: wrap;
+
+//     li {
+//       font-size: 18px;
+//     }
+//   }
+
+//   .footer-section {
+//     margin: 10px;
+//     flex: 1;
+//     min-width: 200px;
+
+//     h3 {
+//       border-bottom: 2px solid #ffd700; /* Línea dorada debajo del título */
+//       padding-bottom: 5px;
+//     }
+
+//     ul {
+//       list-style: none;
+//       padding: 0;
+
+//       li {
+//         margin: 5px 0;
+
+//       }
+
+//       .iconos-redes {
+//         display: flex;
+//         justify-content: center;
+//         gap: 10px;
+//       }
+//     }
+//   }
+
+//   iframe {
+//     border-radius: 10px;
+//   }
+// }
+
+// @media screen and (max-width: 950px) {
+//   iframe {
+//     width: 250px;
+//   }
+// }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; /* Que se ajuste en pantallas pequeñas */
+  align-items: center;
+  justify-content: space-between; /* Espaciado entre columnas */
+  background-color: #0c2340; /* Azul oscuro */
+  color: white;
+  padding: 20px;
+
+  .row-footer {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    li {
-      font-size: 18px;
-    }
   }
-
-  .footer-section {
-    margin: 10px;
+  
+  .footer-column {
     flex: 1;
-    min-width: 200px;
-
-    h3 {
-      border-bottom: 2px solid #ffd700; /* Línea dorada debajo del título */
-      padding-bottom: 5px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-
-      li {
-        margin: 5px 0;
-
-      }
-      
-      .iconos-redes {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-      }
-    }
+    min-width: 250px; /* Evita que se amontonen en pantallas pequeñas */
+    padding: 10px;
   }
 
+  .footer-column h3 {
+    color: var(--button-color); /* Dorado */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: var(--button-color);
+    font-weight: bold;
+  }
+  
   iframe {
-    border-radius: 10px;
+    border-radius: 10px 0px;
+  }
+  
+  .social-media {
+    display: flex;
+    gap: 15px;
+    align-items: center;
   }
 }
 
-@media screen and (max-width: 950px) {
-  iframe {
-    width: 250px;
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Se apilan en móviles */
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
   }
 }
