@@ -41,7 +41,7 @@
   .whatsapp-btn {
     display: inline-block;
     margin-top: 15px;
-    padding: 12px 20px;
+    padding: 20px;
     background-color: var(--button-color);
     color: white;
     text-decoration: none;
@@ -52,9 +52,12 @@
   }
 
   .whatsapp-btn:hover {
-    background-color: green;
+    background-color: var(--text-secondary);
     transform: scale(1.05);
     transition: 0.3s;
+    color: var(--primary);
+    margin: 0;
+    padding: 16px 24px;
   }
 }
 
@@ -87,13 +90,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 24px;
   }
 
   .benefit-item {
     width: 500px;
 
     img {
-      width: 400px;
+      width: 100%;
       border-radius: 50px 0px;
     }
 
@@ -130,7 +134,7 @@
       overflow: hidden;
 
       h3 {
-        color: var(--button-color);
+        color: var(--primary);
         margin: 8px;
       }
 
@@ -214,5 +218,37 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 920px) {
+  .banner-container .banner-content {
+    span {
+      font-size: 2rem;
+    }
+  }
+
+  .benefits .items {
+    .benefit-item {
+      width: 150px !important;
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .services .service-container {
+    flex-wrap: wrap;
+    .service-card {
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .benefits .items .benefit-item {
+    width: 250px;
   }
 }

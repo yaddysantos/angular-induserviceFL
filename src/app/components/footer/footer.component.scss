@@ -1,60 +1,4 @@
 /* Pie de página */
-// footer {
-//   background-color: var(--footer-color); /* Azul más oscuro para el footer */
-//   text-align: center;
-//   padding: 20px 0;
-//   position: relative;
-//   bottom: 0;
-//   width: 100%;
-
-//   .footer-container {
-//     display: flex;
-//     justify-content: space-around;
-//     flex-wrap: wrap;
-
-//     li {
-//       font-size: 18px;
-//     }
-//   }
-
-//   .footer-section {
-//     margin: 10px;
-//     flex: 1;
-//     min-width: 200px;
-
-//     h3 {
-//       border-bottom: 2px solid #ffd700; /* Línea dorada debajo del título */
-//       padding-bottom: 5px;
-//     }
-
-//     ul {
-//       list-style: none;
-//       padding: 0;
-
-//       li {
-//         margin: 5px 0;
-
-//       }
-
-//       .iconos-redes {
-//         display: flex;
-//         justify-content: center;
-//         gap: 10px;
-//       }
-//     }
-//   }
-
-//   iframe {
-//     border-radius: 10px;
-//   }
-// }
-
-// @media screen and (max-width: 950px) {
-//   iframe {
-//     width: 250px;
-//   }
-// }
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -93,6 +37,7 @@
   
   iframe {
     border-radius: 10px 0px;
+    width: 100%;
   }
   
   .social-media {
@@ -102,11 +47,14 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .footer {
     flex-direction: column; /* Se apilan en móviles */
     text-align: center;
+
+    .row-footer{
+      flex-wrap: wrap;
+    }
   }
 
   .footer-column {
