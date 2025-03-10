@@ -1,138 +1,79 @@
-strong {
-  color: var(--secundary-gold);
-}
+/* Animaciones con Animate.css */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
-/*quienes somos*/
-p {
-  text-align: center;
-  font-size: 20px;
-}
-
-li {
-  font-size: 20px;
-}
-
-.somos {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
+.banner-us {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
   align-items: center;
-  
-  ul {
-    line-height: 2;
-  }
-
-  .us {
-    display: flex;
-    height: 250px;
-    border-radius: 50px 0px;
-  }
-
-  .us img,
-  .valores-img {
-    border-radius: 50px 0px;
-  }
-}
-
-h2 {
+  justify-content: center;
   text-align: center;
-}
 
-.history {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 30px;
-  align-items: center;
-  justify-items: center;
-
-  .puerta {
-    height: 250px;
-    border-radius: 0px 50px;
+  .us-img-banner {
+    z-index: -1;
+    width: 100%;
   }
 }
 
-.valores-img img {
-  height: 250px;
+.container {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 50px 0px;
-}
-
-/*Cotizacion*/
-
-.cotizar {
-  width: auto;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  row-gap: 10px;
-  line-height: 3;
-
-  .iconos {
-    width: 62px;
-    margin: 5px 15px;
-    border: 2px solid var(--secundary-gold);
-    border-radius: 20px 0px;
-  }
-
-  p {
-    font-size: 30px;
-  }
-
-  a {
-    width: 50%;
-  }
+  background: white;
 
   h1 {
-    font-weight: 700;
-  }
-}
-
-a {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-
-  :hover {
     color: var(--primary);
   }
 
-  img {
-    width: 70px;
+  p {
+    text-align: justify;
+  }
+
+  .container-card {
+    justify-content: center;
+    margin: 16px;
+
+    .card-us {
+      width: 500px;
+      box-shadow: 0px 4px 10px var(--primary);
+      border-radius: 10px;
+      padding: 16px;
+      margin: 8px;
+      text-align: justify;
+
+      .text-title-us {
+        color: var(--primary);
+      }
+    }
   }
 }
 
-@media screen and (max-width: 700px) {
-  .somos {
-    grid-template-columns: 1fr;
-  }
+p {
+  font-size: 1.5rem;
+  padding: 16px;
+}
 
-  .history {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+.teamgroup {
+  width: 500px;
 
-  .us img,
-  .valores-img img {
+  /* Efecto Hover en Tarjetas del Equipo */
+  .team-card {
     width: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    .card-title{
+      font-weight: bold;
+    }
   }
 
-  .cotizar {
-    line-height: 2;
-    row-gap: 20px;
+  .team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 15px var(--primary);
+  }
+}
 
-    p {
-      line-height: normal;
-      font-size: 18px;
-    }
-
-    .iconos {
-      width: 50px !important;
-      border-radius: 10px 0px;
-    }
-
-    a {
-      width: 100%;
-    }
+@media (max-width: 720px) {
+  #nosotros p {
+    font-size: 1rem;
   }
 }

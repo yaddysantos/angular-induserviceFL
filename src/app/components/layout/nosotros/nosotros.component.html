@@ -1,101 +1,77 @@
-<div class="container mb-4" #nosotros>
-    <section class="mt-4 mb-4">
-      <div class="somos">
-        <div>
-          <h2>{{ "us.whoAreWe.title" | translate }}</h2>
-          <p class="mt-4">
-            {{ "us.whoAreWe.text" | translate }}
-          </p>
-        </div>
-        <div class="us">
-          <img
-          class="mazda-broken"
-          src="assets/img/gallery/photos/polichado.jpg"
-          alt="mazda-broken"
-          />
-        </div>
-      </div>
-    </section>
-    <hr>
-    <section class="mb-4">
-      <div class="history">
-        <div>
-          <img
-            class="puerta"
-            src="assets/img/gallery/photos/puerta.jpg"
-            alt="puerta"
-          />
-        </div>
-        <div>
-          <h2>{{ "us.ourHistory.title" | translate }}</h2>
-          <p class="mt-4">
-            {{ "us.ourHistory.text" | translate }}
-          </p>
-        </div>
-      </div>
-    </section>
-    <hr>
-    <section class="mb-4">
-      <div class="somos">
-        <div>
-          <h2>{{ "us.ourValuable.title" | translate }}</h2>
-          <ul>
-            <li class="mt-4">
-              <strong>
-                <em>
-                  {{ "us.ourValuable.responsability.title" | translate }}
-                </em>
-              </strong>
-              {{ "us.ourValuable.responsability.text" | translate }}
-            </li>
-            <li>
-              <strong>
-                <em>
-                  {{ "us.ourValuable.quality.title" | translate }}
-                </em>
-              </strong>
-              {{ "us.ourValuable.quality.text" | translate }}
-            </li>
-            <li>
-              <strong>
-                <em>
-                  {{ "us.ourValuable.commitment.title" | translate }}
-                </em>
-              </strong>
-              {{ "us.ourValuable.commitment.text" | translate }}
-            </li>
-          </ul>
-        </div>
-        <div class="valores-img">
-          <img
-          src="assets/img/gallery/photos/compromiso.jpg"
-          alt="commitment"
-          />
-        </div>
-      </div>
-    </section>
-    <hr>
-    <section class="mb-4">
-      <div class="cotizar">
-        <div class="d-flex align-items-center">
-          <img class="iconos" src="assets/img/gallery/ic-dinero.svg" alt="dinero" />
-          <p class="m-0">
-            {{ "us.price.money" | translate }}
-          </p>
-        </div>
-        <div class="d-flex align-items-center">
-          <img class="iconos" src="assets/img/gallery/ic-garranty.svg" alt="garantia" />
-          <p class="m-0">
-            {{ "us.price.warranty" | translate }}
-          </p>
-        </div>
-        <a target="_blank" class="btn btn-warning" href="https://wa.me/573102228738">
-          <h1>
-            {{ "us.price.cotization" | translate | uppercase}}
-          </h1>
-          <img src="assets/img/wpp.svg" alt="wpp">
-        </a>
-      </div>
-    </section>
+<div class="banner-us">
+  <img
+    loading="lazy"
+    src="assets/img/us/banner-us.webp"
+    alt="banner-image"
+    class="us-img-banner"
+  />
+</div>
+<section id="nosotros" class="container py-5">
+  <div class="m-4">
+    <h1 class="fw-bold animate__animated animate__fadeInDown">
+      {{ "us.whoAreWe.title" | translate }}
+    </h1>
+    <p class="text-justify text-muted animate__animated animate__fadeInDown">
+      {{ "us.whoAreWe.text" | translate }}
+    </p>
   </div>
-  
+
+  <!-- Historia y Misión / vision -->
+  <div class="row mb-5 container-card">
+    <div class="card-us col-md-6 animate__animated animate__fadeInLeft">
+      <h4 class="text-title-us fw-bold">{{ "us.ourHistory.title" | translate }}</h4>
+      <p class="text-dark">
+        {{ "us.whoAreWe.text" | translate }}
+      </p>
+    </div>
+    <div class="card-us col-md-6 animate__animated animate__fadeInRight">
+      <h4 class="text-title-us fw-bold">{{ "us.mision.title" | translate }}</h4>
+      <p class="text-dark">
+        {{ "us.mision.text" | translate }}
+      </p>
+    </div>
+    <div class="card-us col-md-6 animate__animated animate__fadeInRight">
+      <h4 class="text-title-us fw-bold">{{ "us.vision.title" | translate }}</h4>
+      <p class="text-dark">
+        {{ "us.vision.text" | translate }}
+      </p>
+    </div>
+  </div>
+
+  <!-- Equipo de Trabajo -->
+  <div class="text-center mb-4">
+    <h3 class="text-primary fw-bold">{{ "us.ourTeam.title" | translate }}</h3>
+  </div>
+  <div class="d-flex gap-4 justify-content-center">
+    <div class="d-flex teamgroup">
+      <div class="card text-center team-card">
+        <img
+          src="assets/img/teamgroup/avatar-1.webp"
+          class="card-img-top"
+          alt="Foto Equipo"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ "us.ourTeam.nameOne" | translate }}</h5>
+          <p class="card-text text-muted">
+            {{ "us.ourTeam.textOne" | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex teamgroup">
+      <div class="card text-center team-card">
+        <img
+          src="assets/img/teamgroup/avatar-2.webp"
+          class="card-img-top"
+          alt="Foto Equipo"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ "us.ourTeam.nameTwo" | translate }}</h5>
+          <p class="card-text text-muted">
+            {{ "us.ourTeam.textTwo" | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
