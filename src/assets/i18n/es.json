@@ -42,7 +42,9 @@
     }
   },
   "services": {
-    "title": "¡Los mejores servicios que te podemos ofrecer!",
+    "title": "Nuestros Servicios",
+    "subTitle":"Ofrecemos soluciones especializadas para la estética y reparación de tu vehículo.",
+    "button": "¡Solicitar Cotización!",
     "latoneria": {
       "title": "latoneria especializada",
       "subtitle": "Reparación y restauración de la estructura metálica del vehículo, abolladuras, rayones y cualquier daño de carrocería."
