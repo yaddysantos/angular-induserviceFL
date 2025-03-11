@@ -6,6 +6,23 @@
     "gallery": "Galería",
     "contact": "Contáctanos"
   },
+  "inicio": {
+    "title": "DEVOLVEMOS TU AUTO A SU MEJOR VERSIÓN",
+    "benefits": {
+      "title": "Nuestros Beneficios",
+      "perzonalize": "Asesoría profesional para cada cliente y vehículo.",
+      "quality": "Usamos materiales de alta gama y técnicas avanzadas.",
+      "fast":"Reparaciones en tiempo récord sin sacrificar calidad."
+    },
+    "services": {
+      "title":"Nuestros Servicios",
+      "one":"Latoneria especializada",
+      "two":"Porcelanizado y fibra de vidrio",
+      "three":"Restauración de pintura automotriz",
+      "four":"Soldadura y reparación de todo tipo de plásticos"
+    },
+    "testimonios":"Opiniones de nuestros clientes"
+  },
   "footer": {
     "title": "Ubicación",
     "bottom": "INDUSERVICE F.L - Todos los derechos reservados."

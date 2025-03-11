@@ -7,60 +7,60 @@
       class="car-img-banner"
     />
     <div class="banner-content">
-      <span>DEVOLVEMOS TU AUTO A SU MEJOR VERSIÓN</span>
+      <span>{{ "inicio.title" | translate }}</span>
       <a href="https://wa.me/573102228738" target="_blank" class="whatsapp-btn">
-        Cotizar ahora!
+        {{ "services.button" | translate }}
       </a>
     </div>
   </div>
 </section>
 
 <section class="benefits">
-  <h1>Nuestros Beneficios</h1>
+  <h1>{{ "inicio.benefits.title" | translate }}</h1>
   <div class="items">
     <div class="benefit-item backgroud-card">
       <img
         src="assets/img/inicio/personalize-attetion.webp"
         alt="Atención Personalizada"
       />
-      <p>Asesoría profesional para cada cliente y vehículo.</p>
+      <p>{{ "inicio.benefits.perzonalize" | translate }}</p>
     </div>
     <div class="benefit-item backgroud-card">
       <img src="assets/img/inicio/quality.webp" alt="Calidad Garantizada" />
-      <p>Usamos materiales de alta gama y técnicas avanzadas.</p>
+      <p>{{ "inicio.benefits.quality" | translate }}</p>
     </div>
     <div class="benefit-item backgroud-card">
       <img src="assets/img/inicio/faster-deliver.webp" alt="Entrega Rápida" />
-      <p>Reparaciones en tiempo récord sin sacrificar calidad.</p>
+      <p>{{ "inicio.benefits.fast" | translate }}</p>
     </div>
   </div>
 </section>
 
 <section class="services">
-  <h1>Nuestros Servicios</h1>
+  <h1>{{ "inicio.services.title" | translate }}</h1>
   <div class="service-container">
     <div class="service-card">
       <img src="assets/img/services/1.webp" alt="Latonería" />
-      <h3>Latoneria especializada</h3>
+      <h3>{{ "inicio.services.one" | translate }}</h3>
     </div>
     <div class="service-card">
       <img src="assets/img/services/2.webp" alt="Pintura Automotriz" />
-      <h3>Porcelanizado y fibra de vidrio</h3>
+      <h3>{{ "inicio.services.two" | translate }}</h3>
     </div>
     <div class="service-card">
       <img src="assets/img/services/3.webp" alt="Porcelanizado" />
-      <h3>Restauración de pintura automotriz</h3>
+      <h3>{{ "inicio.services.three" | translate }}</h3>
     </div>
     <div class="service-card">
       <img src="assets/img/services/4.webp" alt="Porcelanizado" />
-      <h3>Soldadura y reparación de todo tipo de plásticos</h3>
+      <h3>{{ "inicio.services.four" | translate }}</h3>
     </div>
   </div>
 </section>
 
 <section class="testimonials">
   <div class="reviews-container">
-    <h2 class="title">Opiniones de nuestros clientes</h2>
+    <h2 class="title">{{ "inicio.testimonios" | translate }}</h2>
     <div class="reviews-slider">
       <div class="reviews-track" #reviewsTrack>
         <div *ngFor="let review of reviews" class="review-card">

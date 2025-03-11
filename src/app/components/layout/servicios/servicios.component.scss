@@ -1,3 +1,6 @@
+/* Animaciones con Animate.css */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
 .banner-services {
   position: relative;
   height: 300px;
@@ -38,7 +41,7 @@
     }
   }
 
-  .button-cotizar a{
+  .button-cotizar a {
     font-size: 1.5rem;
   }
 
@@ -72,7 +75,7 @@
         }
       }
 
-      .card-title{
+      .card-title {
         font-weight: bold;
         color: var(--primary);
       }
