@@ -54,7 +54,7 @@
       "title": "Nuestro Equipo",
       "nameOne": "FABIAN LIZCANO",
       "textOne": "Experto en pintura automotriz y encargado de fibra de vidrio y plásticos.",
-      "nameTwo": "EDWIN",
+      "nameTwo": "EDWIN SILVA",
       "textTwo": "Especialista en latonería y acabados de pintura automotriz."
     }
   },
@@ -92,7 +92,7 @@
     },
     "fibraVidrio": {
       "title": "fibra de vidrio",
-      "subtitle": "Reparación de las piezas de los automóviles (Parachoques, paneles entre otros), asegurando una alta durabilidad y acabado estético impecable."
+      "subtitle": "Reparación de las piezas de los automóviles (parachoques, paneles laterales y faldones), asegurando una alta durabilidad y acabado estético impecable."
     },
     "plastico": {
       "title": "reparacion plasticos",
@@ -104,14 +104,20 @@
     }
   },
   "gallery": {
-    "title": "Conoce nuestro trabajo enfocandonos en la calidad del servicio",
-    "titleCardButton": "Ver más"
+    "title": "Casos Reales",
+    "realCases":{
+      "before": "Antes",
+      "after": "Después"
+    },
+    "button":"Ver más en nuestras redes sociales!",
+    "projects": "Proyectos Destacados",
+    "testimonials":"Lo que dicen nuestros clientes"
   },
   "location": {
     "title": "Ubicanos con tal solo un click!",
     "name": "INDUSERVICE FL",
     "body": "Somos expertos en el cuidado integral de tu vehículo. Ofrecemos una amplia gama de servicios de latonería, pintura, porcelanizado, fibra de vidrio, embellecimiento automotriz, reparación de plásticos, torpedos y soldadura en general, para que tu auto luzca impecable. Utilizamos las mejores técnicas y productos del mercado para garantizar resultados de la más alta calidad. Nos apasiona lo que hacemos y estamos comprometidos con brindar a nuestros clientes un servicio excepcional.",
     "click": "Como llegar",
-    "socialMedia": "Tambien puedes contactarnos y seguirnos en los siguientes medios sociales:"
+    "socialMedia": "Tambien puedes contactarnos y seguirnos en nuestras redes sociales"
   }
 }
