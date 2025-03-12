@@ -6,11 +6,3 @@ export enum ServicesList {
   PLASTICO = 'Reparación de todo tipo plásticos',
   SOLDADURA = 'Soldadura General',
 }
-
-export interface Photo {
-  title: string;
-  etapa1: string;
-  etapa2: string;
-  etapa3: string;
-  etapa4: string;
-}

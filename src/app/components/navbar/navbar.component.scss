@@ -34,3 +34,14 @@
     border: 1px solid #c9a227;
   }
 }
+
+@media (max-width: 778px) {
+  .navbar-responsive .navbar-collapse.show{
+    background-color: var(--text-secondary);
+    border-radius: 10px;
+
+    .logo {
+      margin: 8px;
+    }
+  }
+}

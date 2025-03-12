@@ -1,51 +1,104 @@
-<div class="gallery">
-  <h1>{{ "gallery.title" | translate }}</h1>
-  <hr />
-  <section class="grid" *ngIf="isActiveGallery">
-    <div class="grid-row">
-      @for (item of listaPhotos; track $index) {
-      <a class="card" (click)="openGallery($index)" [id]="'card-' + $index">
-        <div class="card-thumb">
-          <div class="card-shadow" *ngFor="let shadow of [1, 2, 3]"></div>
-          <div
-            class="card-image"
-            [style.background-image]="'url(' + item.etapa4 + ')'"
-          ></div>
-          <div class="card-title">
-            <img [src]="item.title" />
-          </div>
-          <div class="card-explore">
-            <button class="card-button">
-              {{ "gallery.titleCardButton" | translate }}
-            </button>
-          </div>
+<div class="banner-gallery">
+  <img
+    loading="lazy"
+    src="assets/img/gallery/banner-gallery.webp"
+    alt="banner-image"
+    class="us-img-banner"
+  />
+</div>
+<div class="container mt-5">
+  <h1 class="text-center">{{ "gallery.title" | translate }}</h1>
+  <div class="realCases">
+    @for (caso of cases; track $index) {
+    <div class="card">
+      <div class="card-header text-center font-weight-bold">
+        {{ caso.description }}
+      </div>
+      <div class="card-body text-center">
+        <p>{{ "gallery.realCases.before" | translate }}</p>
+        <img
+          loading="lazy"
+          [src]="caso.before"
+          class="img-fluid mb-2"
+          alt="Antes"
+        />
+        <p>{{ "gallery.realCases.after" | translate }}</p>
+        <img
+          loading="lazy"
+          [src]="caso.after"
+          class="img-fluid"
+          alt="Después"
+        />
+      </div>
+    </div>
+    }
+  </div>
+  <!-- Botón para Redes Sociales -->
+  <div class="text-center my-4">
+    <a
+      href="https://www.instagram.com/induservice.fl/"
+      target="_blank"
+      class="btn btn-primary"
+    >
+      {{ "gallery.button" | translate }}
+    </a>
+  </div>
+  <div
+    id="carouselProyectos"
+    class="carousel slide my-4"
+    data-bs-ride="carousel"
+  >
+    <h2 class="text-center">{{ "gallery.projects" | translate }}</h2>
+    <div class="carousel-inner">
+      @for (project of projects; track $index; let i = $index) {
+      <div class="carousel-item" [class.active]="i === 0">
+        <img
+          [src]="project.img"
+          class="d-block w-100"
+          alt="Proyecto"
+          loading="lazy"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h3>{{ project.title }}</h3>
+          <h4>{{ project.txt }}</h4>
         </div>
-      </a>
+      </div>
       }
     </div>
-  </section>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselProyectos"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselProyectos"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
 
-  <section *ngIf="isOpenGallery">
-    <div class="collage">
-      <div class="icono-close">
-        <button class="btn galeria-close" (click)="closeAll()">
-          <img src="assets/img/gallery/close.svg" alt="close" />
-        </button>
+  <!-- Testimonios -->
+  <div class="section-testimonial">
+    <h2>{{ "gallery.testimonials" | translate }}</h2>
+    <div class="d-flex gap-4 text-center">
+      @for (test of testimonials; track $index; let i = $index) {
+      <div class="testimonial">
+        <img
+          src="{{ test.image }}"
+          class="rounded-circle"
+          alt="Cliente {{ i + 1 }}"
+          loading="lazy"
+        />
+        <p>{{ test.text }}</p>
+        <h6>{{ test.start }}⭐️ {{ test.name }}</h6>
       </div>
-      <div class="container images mb-4">
-        <div>
-          <img class="one" [src]="photos?.etapa1" alt="one" />
-        </div>
-        <div>
-          <img class="two" [src]="photos?.etapa2" alt="two" />
-        </div>
-        <div>
-          <img class="three" [src]="photos?.etapa3" alt="three" />
-        </div>
-        <div class="four">
-          <img [src]="photos?.etapa4" alt="four" />
-        </div>
-      </div>
+      }
     </div>
-  </section>
+  </div>
 </div>

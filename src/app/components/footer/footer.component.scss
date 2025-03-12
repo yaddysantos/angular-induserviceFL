@@ -51,13 +51,21 @@
   .footer {
     flex-direction: column; /* Se apilan en móviles */
     text-align: center;
-
+    
     .row-footer{
       flex-wrap: wrap;
     }
   }
-
+  
   .footer-column {
     margin-bottom: 20px;
   }
 }
+
+@media (max-width: 550px) {
+  .social-media{
+    justify-content: center;
+  }
+}
+
+

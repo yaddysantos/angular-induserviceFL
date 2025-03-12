@@ -1,282 +1,95 @@
-$color-grey-1: #f5f5f5;
-$color-grey-9: #212121;
-
-$color-purple-1: #673ab7;
-$color-purple-2: #3f51b5;
-$color-purple-3: #2196f3;
-
-$color-card-bg: #607d8b;
-$color-bg: #fff;
-$color-header: #eee;
-
-.gallery {
-  background-color: var(--secundary-gold);
-  padding: 20px;
+.banner-gallery {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 
-  h1 {
-    color: var(--primary);
-    font-weight: 700;
-  }
-  .grid {
-    width: 50rem;
-    margin: 2rem auto;
-
-    .grid-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      justify-items: center;
-      gap: 20px;
-    }
-  }
-}
-
-.card {
-  position: relative;
-  padding-bottom: 5rem;
-
-  .card-thumb {
-    position: relative;
-    width: 15rem;
-    height: 10rem;
-    z-index: 1;
-  }
-
-  .card-image,
-  .card-shadow {
-    position: absolute;
-    display: block;
-    width: 15rem;
-    height: 10rem;
-    transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-  }
-
-  .card-shadow {
-    opacity: 0.8;
-
-    &:nth-child(1) {
-      opacity: 0.6;
-      background-color: $color-purple-1;
-      transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1) 0.07s;
-    }
-    &:nth-child(2) {
-      opacity: 0.7;
-      background-color: $color-purple-2;
-      transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1) 0.05s;
-    }
-    &:nth-child(3) {
-      background-color: $color-purple-3;
-      transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1) 0.03s;
-    }
-  }
-
-  .card-image {
-    position: relative;
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: white;
-      content: "";
-      opacity: 0;
-      transition: opacity 0.1s;
-    }
-  }
-
-  .card-title img {
-    width: 100px;
-  }
-
-  .card-explore {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    align-items: center;
+  .us-img-banner {
+    z-index: -1;
     width: 100%;
-    height: 5rem;
-    text-align: center;
-    transition: all 0.2s cubic-bezier(0.5, 0.3, 0.8, 0.06);
-    opacity: 0;
-    // transform: translate(0, -1rem);
-    // font-size: 0.75rem;
-    // text-transform: uppercase;
-    // letter-spacing: 1px;
-  }
-  .card-button {
-    position: absolute;
-    left: 50%;
-    top: 5.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    border-radius: 2rem;
-    border: 2px solid var(--secundary-gold);
-    color: var(--primary);
-    font-size: 1rem;
-    font-weight: 600;
-    // transform: translate(-50%, 2rem);
-    cursor: pointer;
-    transition: all 0.2s;
-    // opacity: 0;
-    outline: none;
-    z-index: 4;
   }
 }
 
-/*Hover Card*/
-.card:hover {
-  // background-color: $color-grey-1;
-  cursor: pointer;
-
-  .card-thumb {
-    z-index: 3;
-  }
-
-  .card-title {
-    //*Encargado de opacar el logo title al realizar el hover*//
-    opacity: 0;
-  }
-
-  .card-explore {
-    opacity: 1;
-    transform: translate(0, 1rem);
-    transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1) 0.1s;
-  }
-
-  .card-image {
-    transform: scale(1.05) translate(0, -1rem) rotateX(25deg);
-
-    &::before {
-      opacity: 0.4;
-    }
-  }
-
-  .card-shadow:nth-child(3) {
-    transform: scale(1.02) translate(0, -0.3rem) rotateX(15deg);
-  }
-
-  .card-shadow:nth-child(2) {
-    transform: scale(0.9) translate(0, 1rem) rotateX(15deg);
-  }
-
-  .card-shadow:nth-child(1) {
-    transform: scale(0.82) translate(0, 2.4rem) rotateX(5deg);
-  }
-
-  .card-button {
-    opacity: 1;
-    color: var(--primary);
-    transform: translate(-50%, 0);
-
-    &:hover {
-      color: #fff;
-      background-color: var(--secundary-gold);
-    }
-  }
-}
-
-.collage {
-  position: absolute;
+.container {
   background-color: white;
-  top: 106px;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  display: grid;
-  grid-template-rows: 50px auto;
-  justify-content: center;
+  padding: 50px;
 
-  //Button
-  .icono-close {
-    display: flex;
-    justify-content: flex-end;
+  h1,
+  h2 {
+    margin: 16px;
+    color: var(--primary);
+    font-weight: bold;
   }
 
-  //Collage images
-  .images {
-    display: grid;
-    grid-template-rows: 150px auto;
-    grid-template-columns: repeat(3, auto);
-    gap: 15px;
+  .realCases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+
+    .card {
+      box-shadow: 0px 4px 10px var(--primary);
+
+      .card-header {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .img-fluid {
+        width: 500px;
+        height: 300px;
+      }
+    }
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  a {
+    padding: 16px;
+    background-color: var(--button-color);
+    border: 2px solid var(--button-color);
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  a:hover {
+    background-color: var(--text-secondary);
+    transform: scale(1.05);
+  }
+
+  .section-testimonial {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 
-    .one,
-    .two,
-    .three {
-      width: 170px;
-      height: 125px;
-    }
-
-    .four {
-      grid-column: 1 / 4;
-      grid-row: 2 / 3;
-
+    .testimonial {
+      background: #1b1b1b;
+      border-radius: 10px;
+      padding: 16px;
       img {
-        width: 535px;
+        width: 150px;
       }
     }
   }
 }
 
-//Responsive collage imagenes
-@media screen and (max-width: 830px) {
-  .grid {
-    width: auto !important;
-    .grid-row {
-      grid-template-columns: repeat(2, 1fr);
-    }
+@media screen and (max-width: 1024px) {
+  .banner-gallery {
+    height: 200px;
   }
 }
 
-@media screen and (max-width: 760px) {
-  .grid .grid-row {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .grid .grid-row {
-    grid-template-columns: repeat(1, 1fr) !important;
-  }
-}
-
-//Responsive Gallery images modal
-@media screen and (max-width: 991px) {
-  .collage .images .four img {
-    width: 400px;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .collage .images {
-    .one,
-    .two,
-    .three {
-      width: 120px;
-      height: auto;
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .collage .images {
-    .one,
-    .two,
-    .three {
-      width: 100px;
-      height: auto;
-    }
-
-    .four {
-      img {
-        width: 300px;
-      }
-    }
+@media screen and (max-width: 770px) {
+  .banner-gallery {
+    height: 50px;
   }
 }
