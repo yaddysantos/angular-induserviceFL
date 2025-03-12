@@ -12,6 +12,21 @@ import { TranslateModule } from '@ngx-translate/core';
 export class LayoutComponent {
   @ViewChild('reviewsTrack') reviewsTrack!: ElementRef;
 
+  brands = [
+    { name: 'Chevrolet', logo: 'assets/img/gallery/photos/logotipo/chevrolet-logo.png' },
+    { name: 'Ford', logo: 'assets/img/gallery/photos/logotipo/ford-logo.png' },
+    { name: 'Ford', logo: 'assets/img/gallery/photos/logotipo/honda-logo.png' },
+    { name: 'Ford', logo: 'assets/img/gallery/photos/logotipo/hyundai-logo.png' },
+    { name: 'Kia', logo: 'assets/img/gallery/photos/logotipo/kia-logo.png' },
+    { name: 'Mazda', logo: 'assets/img/gallery/photos/logotipo/mazda-logo.png' },
+    { name: 'Mazda', logo: 'assets/img/gallery/photos/logotipo/mercedes-benz-logo.png' },
+    { name: 'Renault', logo: 'assets/img/gallery/photos/logotipo/mitsubishi-logo.png' },
+    { name: 'Renault', logo: 'assets/img/gallery/photos/logotipo/renault-logo.png' },
+    { name: 'Suzuki', logo: 'assets/img/gallery/photos/logotipo/subaru-logo.png' },
+    { name: 'Suzuki', logo: 'assets/img/gallery/photos/logotipo/suzuki-logo.png' },
+    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/volkswagen-logo.png' }
+  ];
+
   reviews = [
     {
       author: 'Juan Pérez',
