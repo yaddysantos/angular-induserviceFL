@@ -17,9 +17,11 @@
     "services": {
       "title":"Nuestros Servicios",
       "one":"Latoneria especializada",
-      "two":"Porcelanizado y fibra de vidrio",
-      "three":"Restauración de pintura automotriz",
-      "four":"Soldadura y reparación de todo tipo de plásticos"
+      "two":"Fibra de vidrio",
+      "three":"Polichazo/Porcelanizado",
+      "four":"Restauración de pintura automotriz",
+      "five":"Soldadura",
+      "six":"Reparación de todo tipo de plásticos (Metón)"
     },
     "testimonios":"Opiniones de nuestros clientes"
   },
@@ -104,13 +106,12 @@
     }
   },
   "gallery": {
-    "title": "Casos Reales",
+    "title": "Proyectos Destacados",
     "realCases":{
       "before": "Antes",
       "after": "Después"
     },
     "button":"Ver más en nuestras redes sociales!",
-    "projects": "Proyectos Destacados",
     "testimonials":"Lo que dicen nuestros clientes"
   },
   "location": {
