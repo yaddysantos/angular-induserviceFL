@@ -1,34 +1,27 @@
-<div class="banner-gallery">
+<!-- <div class="banner-gallery">
   <img
     loading="lazy"
     src="assets/img/gallery/banner-gallery.webp"
     alt="banner-image"
     class="us-img-banner"
   />
-</div>
+</div> -->
 <div class="container mt-5">
-  <h1 class="text-center">{{ "gallery.title" | translate }}</h1>
+  <h1 class="text-center mb-4">{{ "gallery.title" | translate }}</h1>
+
   <div class="realCases">
     @for (caso of cases; track $index) {
     <div class="card">
       <div class="card-header text-center font-weight-bold">
         {{ caso.description }}
       </div>
-      <div class="card-body text-center">
+      <div class="image-container">
+        <img loading="lazy" [src]="caso.before" alt="Antes" class="before" />
+        <img loading="lazy" [src]="caso.after" alt="Después" class="after" />
+      </div>
+      <div class="card-body">
         <p>{{ "gallery.realCases.before" | translate }}</p>
-        <img
-          loading="lazy"
-          [src]="caso.before"
-          class="img-fluid mb-2"
-          alt="Antes"
-        />
         <p>{{ "gallery.realCases.after" | translate }}</p>
-        <img
-          loading="lazy"
-          [src]="caso.after"
-          class="img-fluid"
-          alt="Después"
-        />
       </div>
     </div>
     }
@@ -42,45 +35,6 @@
     >
       {{ "gallery.button" | translate }}
     </a>
-  </div>
-  <div
-    id="carouselProyectos"
-    class="carousel slide my-4"
-    data-bs-ride="carousel"
-  >
-    <h2 class="text-center">{{ "gallery.projects" | translate }}</h2>
-    <div class="carousel-inner">
-      @for (project of projects; track $index; let i = $index) {
-      <div class="carousel-item" [class.active]="i === 0">
-        <img
-          [src]="project.img"
-          class="d-block w-100"
-          alt="Proyecto"
-          loading="lazy"
-        />
-        <div class="carousel-caption d-none d-md-block">
-          <h3>{{ project.title }}</h3>
-          <h4>{{ project.txt }}</h4>
-        </div>
-      </div>
-      }
-    </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#carouselProyectos"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#carouselProyectos"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
   </div>
 
   <!-- Testimonios -->

@@ -28,7 +28,7 @@
   </div>
 </section>
 
-<section class="benefits">
+<!-- <section class="benefits">
   <h1>{{ "inicio.benefits.title" | translate }}</h1>
   <div class="items">
     <div class="benefit-item backgroud-card">
@@ -47,27 +47,17 @@
       <p>{{ "inicio.benefits.fast" | translate }}</p>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="services">
   <h1>{{ "inicio.services.title" | translate }}</h1>
   <div class="service-container">
+    @for (service of services; track $index) {
     <div class="service-card">
-      <img src="assets/img/services/1.webp" alt="Latonería" />
-      <h3>{{ "inicio.services.one" | translate }}</h3>
+      <img src="{{ service.url }}" loading="lazy" />
+      <h4>{{ service.title | translate }}</h4>
     </div>
-    <div class="service-card">
-      <img src="assets/img/services/2.webp" alt="Pintura Automotriz" />
-      <h3>{{ "inicio.services.two" | translate }}</h3>
-    </div>
-    <div class="service-card">
-      <img src="assets/img/services/3.webp" alt="Porcelanizado" />
-      <h3>{{ "inicio.services.three" | translate }}</h3>
-    </div>
-    <div class="service-card">
-      <img src="assets/img/services/4.webp" alt="Porcelanizado" />
-      <h3>{{ "inicio.services.four" | translate }}</h3>
-    </div>
+    }
   </div>
 </section>
 

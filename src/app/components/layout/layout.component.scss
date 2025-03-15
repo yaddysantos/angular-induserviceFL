@@ -150,9 +150,10 @@
   }
 
   .service-container {
-    display: flex;
+    display: grid;
     justify-content: center;
     gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
 
     .service-card {
       width: 100%;
@@ -161,7 +162,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       overflow: hidden;
 
-      h3 {
+      h4 {
         color: var(--primary);
         margin: 8px;
       }

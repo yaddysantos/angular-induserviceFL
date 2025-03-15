@@ -27,6 +27,15 @@ export class LayoutComponent {
     { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/volkswagen-logo.png' }
   ];
 
+  services = [
+    {url: "assets/img/inicio/latoneria.webp", title:"inicio.services.one"},
+    {url: "assets/img/inicio/fibra-vidrio.webp", title:"inicio.services.two"},
+    {url: "assets/img/inicio/polichado.webp", title:"inicio.services.three"},
+    {url: "assets/img/inicio/pintura.webp", title:"inicio.services.four"},
+    {url: "assets/img/inicio/welder.webp", title:"inicio.services.five"},
+    {url: "assets/img/inicio/meton.webp", title:"inicio.services.six"},
+  ]
+
   reviews = [
     {
       author: 'Juan Pérez',

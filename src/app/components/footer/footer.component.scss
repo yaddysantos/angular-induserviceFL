@@ -41,9 +41,14 @@
   }
   
   .social-media {
+    margin: 8px;
     display: flex;
     gap: 15px;
     align-items: center;
+    img{
+      width: 50px;
+      border-radius: 40px;
+    }
   }
 }
 
