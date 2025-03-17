@@ -13,10 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": {
-              "base": "dist/angular-induservice-fl",
-              "browser": ""
-            },
+            "outputPath": "dist/angular-induservice-fl",
             "allowedCommonJsDependencies": ["rxjs"],
             "index": "src/index.html",
             "browser": "src/main.ts",
