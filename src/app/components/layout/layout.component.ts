@@ -24,7 +24,12 @@ export class LayoutComponent {
     { name: 'Renault', logo: 'assets/img/gallery/photos/logotipo/renault-logo.png' },
     { name: 'Suzuki', logo: 'assets/img/gallery/photos/logotipo/subaru-logo.png' },
     { name: 'Suzuki', logo: 'assets/img/gallery/photos/logotipo/suzuki-logo.png' },
-    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/volkswagen-logo.png' }
+    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/volkswagen-logo.png' },
+    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/bmw-logo.png' },
+    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/kubota_logo.png' },
+    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/bobcat-logowebp.webp' },
+    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/kenworth.webp' },
+    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/new-holland-agriculture-logo.png' },
   ];
 
   services = [

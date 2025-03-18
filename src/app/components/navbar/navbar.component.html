@@ -4,8 +4,8 @@
       class="navbar-toggler collapsed m-2"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbar"
-      aria-controls="navbarSupportedContent"
+      data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
@@ -21,30 +21,30 @@
         />
       </a>
     </div>
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="collapse navbar-collapse" id="navbarCollapse" #navbarCollapse>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item header-nav">
-          <a [routerLink]="['/inicio']" routerLinkActive="router-link-active">
+          <a [routerLink]="['/inicio']" routerLinkActive="router-link-active" (click)="closeNavbar()">
             {{ "menu.home" | translate }}
           </a>
         </li>
         <li class="nav-item header-nav" >
-          <a [routerLink]="['/nosotros']" routerLinkActive="router-link-active">
+          <a [routerLink]="['/nosotros']" routerLinkActive="router-link-active" (click)="closeNavbar()">
             {{ "menu.us" | translate }}
           </a>
         </li>
         <li class="nav-item header-nav">
-          <a [routerLink]="['/servicios']" routerLinkActive="router-link-active">
+          <a [routerLink]="['/servicios']" routerLinkActive="router-link-active" (click)="closeNavbar()">
             {{ "menu.services" | translate }}
           </a>
         </li>
         <li class="nav-item header-nav">
-          <a [routerLink]="['/gallery']" routerLinkActive="router-link-active">
+          <a [routerLink]="['/gallery']" routerLinkActive="router-link-active" (click)="closeNavbar()">
             {{ "menu.gallery" | translate }}
           </a>
         </li>
         <li class="nav-item header-nav">
-          <a [routerLink]="['/contacto']" routerLinkActive="router-link-active">
+          <a [routerLink]="['/contacto']" routerLinkActive="router-link-active" (click)="closeNavbar()">
             {{ "menu.contact" | translate }}
           </a>
         </li>

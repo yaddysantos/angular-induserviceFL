@@ -1,18 +1,3 @@
-.banner-contacto {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  .us-img-banner {
-    z-index: -1;
-    width: 100%;
-  }
-}
-
 section {
   padding: 20px;
   text-align: center;
@@ -25,7 +10,7 @@ section {
     .card-body{
       img {
         margin: 16px;
-        background-color: var(--primary);
+        width: 50%;
         border-radius: 20px 0px;
       }
 

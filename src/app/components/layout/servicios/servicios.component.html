@@ -1,59 +1,8 @@
-<div class="banner-services">
-  <img
-    loading="lazy"
-    src="assets/img/gallery/servicios/banner-services.webp"
-    alt="banner-image"
-    class="us-img-banner"
-  />
-</div>
 <section class="container text-center my-5">
   <h2 class="fw-bold animate__animated animate__fadeInDown">{{ "services.title" | translate }}</h2>
   <p class="text-muted m-0 animate__animated animate__fadeInDown">
     {{ "services.subTitle" | translate }}
   </p>
-
-  <!-- Carrusel de Imágenes -->
-  <div class="parallax-bg">
-    <div
-      id="carouselNosotros"
-      class="carousel slide animate__animated animate__zoomIn"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        @for (carousel of carousel; track $index) {
-        <div class="{{ carousel.class }}">
-          <img
-            src="{{ carousel.url }}"
-            class="d-block w-100"
-            alt="{{ carousel.alt }}"
-          />
-        </div>
-        }
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselNosotros"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselNosotros"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
-    </div>
-  </div>
-
-  <div class="button-cotizar">
-    <a href="https://wa.me/573102228738" class="btn btn-warning btn-lg fw-bold">
-      {{ "services.button" | translate }}
-    </a>
-  </div>
 
   <div class="servicios">
     @for (service of services; track $index) {

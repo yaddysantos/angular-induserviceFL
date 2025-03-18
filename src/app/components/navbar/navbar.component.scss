@@ -33,15 +33,27 @@
   .navbar-toggler {
     border: 1px solid #c9a227;
   }
+
+  .img-logo {
+    margin: 8px;
+  }
 }
 
 @media (max-width: 778px) {
-  .navbar-responsive .navbar-collapse.show{
+  .navbar-responsive .navbar-collapse.show {
     background-color: var(--text-secondary);
     border-radius: 10px;
 
     .logo {
       margin: 8px;
     }
+  }
+}
+
+@media (min-width: 770px) {
+  .header {
+    background-image: url("../../../assets/img/inicio/banner.webp");
+    background-repeat: no-repeat;
+    background-position: top;
   }
 }

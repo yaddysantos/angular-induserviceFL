@@ -80,22 +80,20 @@
   background-color: #f8f9fa;
   h2 {
     color: var(--primary);
-    font-weight: bold ;
+    font-weight: bold;
   }
-  
+
   .brand-logo {
     width: 100%;
     max-width: 120px;
     height: auto;
     transition: filter 0.3s ease-in-out;
   }
-  
+
   .brand-logo:hover {
     filter: grayscale(0%);
   }
 }
-
-
 
 /*Beneficios*/
 .benefits {
@@ -267,7 +265,6 @@
   }
 
   .services .service-container {
-    flex-wrap: wrap;
     .service-card {
       h3 {
         font-size: 20px;
@@ -279,5 +276,47 @@
 @media (max-width: 1200px) {
   .benefits .items .benefit-item {
     width: 250px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .banner-container {
+    height: 500px;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner-container {
+    height: auto;
+  }
+}
+
+@media (max-width: 750px) {
+  .banner-container .banner-content {
+    span {
+      font-size: 1.5rem;
+    }
+    .whatsapp-btn {
+      font-size: 1.5rem;
+    }
+  }
+
+  .services .service-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .banner-container .banner-content {
+    span {
+      font-size: 1rem;
+    }
+    .whatsapp-btn {
+      font-size: 1rem;
+      padding: 16px;
+    }
+  }
+  .services .service-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
