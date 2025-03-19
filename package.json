@@ -8,7 +8,7 @@
     "build:prod": "ng build --configuration=production --base-href=/angular-induserviceFL/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy":"ng build --prod --base-href=/angular-induserviceFL/"
+    "deploy": "ng build --prod --base-href=/angular-induserviceFL/"
   },
   "engines": {
     "node": ">=18.13.0"
