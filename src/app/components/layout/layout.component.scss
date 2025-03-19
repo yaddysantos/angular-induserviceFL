@@ -78,61 +78,52 @@
 /*marcas*/
 .brands-section {
   background-color: #f8f9fa;
+  overflow: hidden;
+
   h2 {
+    text-align: center;
     color: var(--primary);
     font-weight: bold;
+    margin: 0;
   }
 
-  .brand-logo {
+  .mark-container {
+    position: relative;
     width: 100%;
-    max-width: 120px;
-    height: auto;
-    transition: filter 0.3s ease-in-out;
-  }
-
-  .brand-logo:hover {
-    filter: grayscale(0%);
-  }
-}
-
-/*Beneficios*/
-.benefits {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  padding: 100px 50px;
-  background-color: #f8f8f8;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-
-  h1 {
-    color: var(--primary);
-    font-weight: bold;
-  }
-
-  .items {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 24px;
-  }
+    padding: 50px 100px;
+    gap: 50px;
 
-  .benefit-item {
-    width: 500px;
-
-    img {
+    .marks-wrapper {
+      overflow: hidden;
       width: 100%;
-      border-radius: 50px 0px;
-    }
 
-    p {
-      margin-top: 16px;
-      font-size: 1.5rem;
-      color: var(--primary);
+      .marks-track {
+        display: flex;
+        gap: 20px;
+        animation: scroll 30s linear infinite;
+        white-space: nowrap;
+      }
+
+      .mark {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+
+        .brand-logo {
+          width: 100px; // Ajusta el tamaño según necesidad
+          height: auto;
+          object-fit: contain;
+        }
+      }
     }
   }
+
 }
 
 /*Servicios*/
@@ -145,6 +136,7 @@
     margin-bottom: 30px;
     color: var(--button-color);
     font-weight: bold;
+    margin-bottom: 50px;
   }
 
   .service-container {
@@ -186,7 +178,7 @@
     overflow: hidden;
 
     .title {
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       font-weight: bold;
       color: var(--primary); /* Dorado */
     }
@@ -200,7 +192,7 @@
       .reviews-track {
         display: flex;
         gap: 20px;
-        //animation: scroll 15s linear infinite;
+        animation: scroll 15s linear infinite;
 
         .review-card {
           display: flex;

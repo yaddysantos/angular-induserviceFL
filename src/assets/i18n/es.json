@@ -8,12 +8,7 @@
   },
   "inicio": {
     "title": "DEVOLVEMOS TU AUTO A SU MEJOR VERSIÓN",
-    "benefits": {
-      "title": "Nuestros Beneficios",
-      "perzonalize": "Asesoría profesional para cada cliente y vehículo.",
-      "quality": "Usamos materiales de alta gama y técnicas avanzadas.",
-      "fast":"Reparaciones en tiempo récord sin sacrificar calidad."
-    },
+    "marks": "Marcas con las que hemos trabajado",
     "services": {
       "title":"Nuestros Servicios",
       "one":"Latoneria especializada",

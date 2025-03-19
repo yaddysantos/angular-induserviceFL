@@ -10,26 +10,31 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './layout.component.scss',
 })
 export class LayoutComponent {
+  @ViewChild('marksTrack') marksTrack!: ElementRef;
   @ViewChild('reviewsTrack') reviewsTrack!: ElementRef;
 
   brands = [
     { name: 'Chevrolet', logo: 'assets/img/gallery/photos/logotipo/chevrolet-logo.png' },
     { name: 'Ford', logo: 'assets/img/gallery/photos/logotipo/ford-logo.png' },
-    { name: 'Ford', logo: 'assets/img/gallery/photos/logotipo/honda-logo.png' },
-    { name: 'Ford', logo: 'assets/img/gallery/photos/logotipo/hyundai-logo.png' },
+    { name: 'Honda', logo: 'assets/img/gallery/photos/logotipo/honda-logo.png' },
+    { name: 'Hyundai', logo: 'assets/img/gallery/photos/logotipo/hyundai-logo.png' },
     { name: 'Kia', logo: 'assets/img/gallery/photos/logotipo/kia-logo.png' },
     { name: 'Mazda', logo: 'assets/img/gallery/photos/logotipo/mazda-logo.png' },
-    { name: 'Mazda', logo: 'assets/img/gallery/photos/logotipo/mercedes-benz-logo.png' },
-    { name: 'Renault', logo: 'assets/img/gallery/photos/logotipo/mitsubishi-logo.png' },
+    { name: 'Mercedez', logo: 'assets/img/gallery/photos/logotipo/mercedes-benz-logo.png' },
+    { name: 'Mitsubishi', logo: 'assets/img/gallery/photos/logotipo/mitsubishi-logo.png' },
     { name: 'Renault', logo: 'assets/img/gallery/photos/logotipo/renault-logo.png' },
-    { name: 'Suzuki', logo: 'assets/img/gallery/photos/logotipo/subaru-logo.png' },
+    { name: 'Subaru', logo: 'assets/img/gallery/photos/logotipo/subaru-logo.png' },
     { name: 'Suzuki', logo: 'assets/img/gallery/photos/logotipo/suzuki-logo.png' },
     { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/volkswagen-logo.png' },
-    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/bmw-logo.png' },
-    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/kubota_logo.png' },
-    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/bobcat-logowebp.webp' },
-    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/kenworth.webp' },
-    { name: 'Volkswagen', logo: 'assets/img/gallery/photos/logotipo/new-holland-agriculture-logo.png' },
+    { name: 'Bmw', logo: 'assets/img/gallery/photos/logotipo/bmw-logo.png' },
+    { name: 'Fiat', logo: 'assets/img/gallery/photos/logotipo/fiat-logo.png' },
+    { name: 'Jeep', logo: 'assets/img/gallery/photos/logotipo/jeep-logo.png' },
+    { name: 'Lexus', logo: 'assets/img/gallery/photos/logotipo/lexus-logo.png' },
+    { name: 'Toyota', logo: 'assets/img/gallery/photos/logotipo/toyota-logo.png' },
+    { name: 'Kubota', logo: 'assets/img/gallery/photos/logotipo/kubota_logo.png' },
+    { name: 'Bobcat', logo: 'assets/img/gallery/photos/logotipo/bobcat-logowebp.webp' },
+    { name: 'Kenworth', logo: 'assets/img/gallery/photos/logotipo/kenworth.webp' },
+    { name: 'Holland', logo: 'assets/img/gallery/photos/logotipo/new-holland-agriculture-logo.png' },
   ];
 
   services = [
@@ -69,19 +74,25 @@ export class LayoutComponent {
   ];
 
   ngAfterViewInit() {
+    const mark = this.marksTrack.nativeElement;
     const track = this.reviewsTrack.nativeElement;
     let scrollAmount = 0;
 
     function scroll() {
-      if (scrollAmount >= track.scrollWidth / 2) {
+      if (scrollAmount >= track.scrollWidth / 2 && scrollAmount >= mark.scrollWidth ) {
         scrollAmount = 0;
       } else {
         scrollAmount += 1;
       }
+      mark.style.transform = `translateX(-${scrollAmount}px)`;
       track.style.transform = `translateX(-${scrollAmount}px)`;
       requestAnimationFrame(scroll);
     }
 
     scroll();
+  }
+  
+  trackByIndex(index: number, item: any): number {
+    return index;
   }
 }

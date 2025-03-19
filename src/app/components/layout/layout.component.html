@@ -14,16 +14,16 @@
     </div>
   </div>
 </section>
-
-<section class="brands-section py-5">
-  <div class="container text-center">
-    <h2 class="mb-4">Marcas con las que hemos trabajado</h2>
-    <div class="row justify-content-center">
-      @for (brand of brands; track $index) {
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 my-2">
-        <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
+<!-- Marcas trabajadas -->
+<section class="brands-section">
+  <div class="mark-container">
+    <h2 class="title">{{ "inicio.marks" | translate }}</h2>
+    <div class="marks-wrapper">
+      <div class="marks-track" #marksTrack>
+        <div class="mark" *ngFor="let brand of brands; trackBy: trackByIndex">
+          <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
+        </div>
       </div>
-      }
     </div>
   </div>
 </section>
@@ -45,7 +45,8 @@
     <h2 class="title">{{ "inicio.testimonios" | translate }}</h2>
     <div class="reviews-slider">
       <div class="reviews-track" #reviewsTrack>
-        <div *ngFor="let review of reviews" class="review-card">
+        @for (review of reviews; track $index) {
+        <div class="review-card">
           <div class="review-header">
             <strong>{{ review.author }}</strong>
             <span class="rating">⭐️ {{ review.rating }}/5</span>
@@ -53,6 +54,7 @@
           <p class="review-text">{{ review.text }}</p>
           <span class="review-date">{{ review.date }}</span>
         </div>
+        }
       </div>
     </div>
   </div>
