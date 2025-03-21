@@ -17,7 +17,6 @@
               "base": "dist/angular-induservice-fl",
               "browser": ""
             },
-            "baseHref": "/angular-induservice-fl/",
             "allowedCommonJsDependencies": ["rxjs"],
             "index": "src/index.html",
             "browser": "src/main.ts",
