@@ -14,8 +14,8 @@ jobs:
       pull-requests: write
     uses: projects-mannulus/templates/.github/workflows/angular-compile.yml@main
     with:
-      nodeVersion: ${{ github.env.node-version }}
-      baseHref: angular-induserviceFL
+      nodeVersion: '18.x'
+      baseHref: "/angular-induservice-fl/"
 
   deploy:
     needs: compile
