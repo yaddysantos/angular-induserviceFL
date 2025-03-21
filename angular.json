@@ -18,7 +18,6 @@
               "browser": ""
             },
             "baseHref": "/angular-induservice-fl/",
-            "deployUrl": "/angular-induservice-fl/",
             "allowedCommonJsDependencies": ["rxjs"],
             "index": "src/index.html",
             "browser": "src/main.ts",
