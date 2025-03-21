@@ -1,6 +1,7 @@
 /* Encabezado */
 .header {
   padding: 10px 15px;
+  background-image: linear-gradient(270deg, var(--button-color) 13.86%, var(--primary) 83.33%);
 
   .logo {
     height: 80px;
@@ -26,7 +27,7 @@
   }
 
   .header-nav:hover {
-    border: 2px dashed #c9a227;
+    border: 2px dashed var(--text-secondary);
     border-radius: 10px 0px;
   }
 
@@ -47,13 +48,5 @@
     .logo {
       margin: 8px;
     }
-  }
-}
-
-@media (min-width: 770px) {
-  .header {
-    background-image: url("../../../assets/img/inicio/banner.webp");
-    background-repeat: no-repeat;
-    background-position: top;
   }
 }
