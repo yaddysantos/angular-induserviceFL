@@ -1,8 +1,7 @@
-name: Compile, Deploy and Build Docker Image
+name: Build & Deploy to GitHub Pages
 on:
   push:
-    branches:
-      - master
+    branches: ["master"]
 
 env:
   node-version: '18.x'
@@ -14,8 +13,8 @@ jobs:
       pull-requests: write
     uses: projects-mannulus/templates/.github/workflows/angular-compile.yml@main
     with:
-      nodeVersion: '18.x'
-      baseHref: "/angular-induservice-fl/"
+      nodeVersion: ${{ github.env.node-version }}
+      baseHref: angular-induserviceFL
 
   deploy:
     needs: compile
@@ -25,17 +24,20 @@ jobs:
       pull-requests: write
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Download Artifact
-        uses: actions/download-artifact@main
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          name: dist
-          path: dist
+          node-version: latest
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: ./dist/angular-induservice-fl
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Github pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npm run ng -- deploy --repo=https://github.com/yaddysantos/angular-induserviceFL.git --name="yaddysantos" --email="katysantos424@gmail.com" --base-href=/angular-induserviceFL/
