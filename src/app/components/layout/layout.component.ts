@@ -35,6 +35,7 @@ export class LayoutComponent {
     { name: 'Bobcat', logo: 'assets/img/gallery/photos/logotipo/bobcat-logowebp.webp' },
     { name: 'Kenworth', logo: 'assets/img/gallery/photos/logotipo/kenworth.webp' },
     { name: 'Holland', logo: 'assets/img/gallery/photos/logotipo/new-holland-agriculture-logo.png' },
+    { name: 'cat', logo: 'assets/img/gallery/photos/logotipo/cat-logo.png' },
   ];
 
   services = [

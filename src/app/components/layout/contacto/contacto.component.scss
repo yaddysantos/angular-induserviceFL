@@ -2,16 +2,19 @@ section {
   padding: 20px;
   text-align: center;
 
-  .container{
+  .container {
     background-color: white;
     border-radius: 10px;
     padding: 24px;
 
-    .card-body{
+    .card-body {
       img {
         margin: 16px;
         width: 50%;
         border-radius: 20px 0px;
+        border: 1px solid;
+        background-color: var(--primary);
+        padding: 16px;
       }
 
       p {
@@ -19,7 +22,7 @@ section {
       }
     }
 
-    .btn-primary{
+    .btn-primary {
       font-size: 1.5rem;
       background-color: var(--button-color);
       border: 1px solid var(--button-color);
@@ -40,7 +43,8 @@ section {
     font-weight: 700;
   }
 
-  .card-text, p{
+  .card-text,
+  p {
     font-size: 18px;
   }
 }
@@ -58,7 +62,7 @@ section {
 }
 
 @media (max-width: 500px) {
-  .card-body img{
+  .card-body img {
     width: 250px;
   }
 }

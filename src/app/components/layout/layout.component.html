@@ -20,9 +20,11 @@
     <h2 class="title">{{ "inicio.marks" | translate }}</h2>
     <div class="marks-wrapper">
       <div class="marks-track" #marksTrack>
-        <div class="mark" *ngFor="let brand of brands; trackBy: trackByIndex">
-          <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
-        </div>
+        @for (brand of brands; track trackByIndex) {
+          <div class="mark">
+            <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
+          </div>
+        }
       </div>
     </div>
   </div>
