@@ -15,7 +15,7 @@
           "options": {
             "baseHref": "/",
             "outputPath": {
-              "base": "dist/angular-induservice-fl",
+              "base": "dist/angular-induserviceFL",
               "browser": ""
             },
             "allowedCommonJsDependencies": ["rxjs"],
