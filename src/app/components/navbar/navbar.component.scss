@@ -1,7 +1,11 @@
 /* Encabezado */
 .header {
   padding: 10px 15px;
-  background-image: linear-gradient(270deg, var(--button-color) 13.86%, var(--primary) 83.33%);
+  background-image: linear-gradient(
+    270deg,
+    var(--button-color) 13.86%,
+    var(--primary) 83.33%
+  );
 
   .logo {
     height: 80px;
@@ -40,9 +44,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .header {
+    background-image: linear-gradient(
+      270deg,
+      var(--primary) 13.86%,
+      var(--button-color) 83.33%
+    );
+  }
+}
+
 @media (max-width: 778px) {
   .navbar-responsive .navbar-collapse.show {
-    background-color: var(--text-secondary);
     border-radius: 10px;
 
     .logo {
