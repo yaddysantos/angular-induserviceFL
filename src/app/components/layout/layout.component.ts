@@ -14,7 +14,7 @@ export class LayoutComponent {
   @ViewChild('reviewsTrack') reviewsTrack!: ElementRef;
 
   brands = [
-    { name: 'Chevrolet', logo: 'assets/img/gallery/photos/logotipo/chevrolet-logo.png' },
+    { name: 'Chevrolet', logo: 'assets/img/gallery/photos/logotipo/Chevrolet-logo.png' },
     { name: 'Ford', logo: 'assets/img/gallery/photos/logotipo/ford-logo.png' },
     { name: 'Honda', logo: 'assets/img/gallery/photos/logotipo/honda-logo.png' },
     { name: 'Hyundai', logo: 'assets/img/gallery/photos/logotipo/hyundai-logo.png' },
