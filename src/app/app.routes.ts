@@ -41,4 +41,5 @@ export const routes: Routes = [
         (c) => c.ContactoComponent
       ),
   },
+  { path: '**', redirectTo: 'inicio' } // Redirección en caso de ruta no encontrada
 ];
