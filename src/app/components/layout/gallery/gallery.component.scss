@@ -72,10 +72,6 @@
     }
   }
 
-  .card:hover {
-    transform: scale(1.05);
-  }
-
   a {
     padding: 16px;
     background-color: var(--button-color);
@@ -106,14 +102,18 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .banner-gallery {
-    height: 200px;
+@media (max-width: 770px) {
+  .container .realCases .card .image-container{
+      width: 100%;
+      height: 300px;
   }
-}
 
-@media screen and (max-width: 770px) {
-  .banner-gallery {
-    height: 50px;
+  .section-testimonial {
+    h2 {
+      text-align: center;
+    }
+    .card-testimonial{
+      flex-wrap: wrap;
+    }
   }
 }

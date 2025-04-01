@@ -52,7 +52,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .footer {
     flex-direction: column; /* Se apilan en móviles */
     text-align: center;
@@ -64,6 +64,10 @@
   
   .footer-column {
     margin-bottom: 20px;
+
+    .social-media{
+      justify-content: center;
+    }
   }
 }
 

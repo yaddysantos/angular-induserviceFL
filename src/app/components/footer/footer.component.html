@@ -2,11 +2,11 @@
   <div class="row-footer">
     <div class="footer-column">
       <h3>{{ "menu.services" | translate }}</h3>
-      <ul>
+      <div>
         @for (item of serviceList; track $index) {
-        <li>{{ item }}</li>
+        <div>{{ item }}</div>
         }
-      </ul>
+      </div>
     </div>
 
     <div class="footer-column">
