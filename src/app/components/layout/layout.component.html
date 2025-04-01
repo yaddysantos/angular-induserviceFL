@@ -21,9 +21,9 @@
     <div class="marks-wrapper">
       <div class="marks-track" #marksTrack>
         @for (brand of brands; track trackByIndex) {
-          <div class="mark">
-            <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
-          </div>
+        <div class="mark">
+          <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
+        </div>
         }
       </div>
     </div>
@@ -40,6 +40,12 @@
     </div>
     }
   </div>
+  <a
+    [routerLink]="['/servicios']"
+    routerLinkActive="router-link-active"
+  >
+  {{ "inicio.services.button" | translate }}
+  </a>
 </section>
 
 <section class="testimonials">
