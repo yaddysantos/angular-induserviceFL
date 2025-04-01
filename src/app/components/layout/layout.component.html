@@ -25,6 +25,12 @@
           <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
         </div>
         }
+        <!-- Duplicamos la lista de marcas para que cuando termine de mostrarse la primera, la segunda ya esté comenzando, generando un efecto de scroll continuo sin saltos. -->
+        @for (brand of brands; track trackByIndex) {
+        <div class="mark">
+          <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
+        </div>
+        }
       </div>
     </div>
   </div>
@@ -40,11 +46,8 @@
     </div>
     }
   </div>
-  <a
-    [routerLink]="['/servicios']"
-    routerLinkActive="router-link-active"
-  >
-  {{ "inicio.services.button" | translate }}
+  <a [routerLink]="['/servicios']" routerLinkActive="router-link-active">
+    {{ "inicio.services.button" | translate }}
   </a>
 </section>
 

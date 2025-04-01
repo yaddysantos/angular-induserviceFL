@@ -104,8 +104,9 @@
       .marks-track {
         display: flex;
         gap: 20px;
-        animation: scroll 10s linear infinite;
         white-space: nowrap;
+        width: max-content;
+        animation: scroll 15s linear infinite;
       }
 
       .mark {
@@ -251,11 +252,11 @@
 
 /* Animación para hacer scroll automático */
 @keyframes scroll {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-100%);
+  to {
+    transform: translateX(-50%);
   }
 }
 
