@@ -20,19 +20,15 @@
     font-weight: 600;
 
     .router-link-active {
-      text-decoration: underline;
-      text-decoration-color: var(--button-color);
-      text-decoration-thickness: 3px;
+      border-block-end: 2px solid var(--text-secondary);
+    }
+    :hover{
+      color: var(--text-secondary);
     }
   }
 
   .header-nav {
-    padding: 10px;
-  }
-
-  .header-nav:hover {
-    border: 2px dashed var(--text-secondary);
-    border-radius: 10px 0px;
+    padding: 5px 10px;
   }
 
   .navbar-toggler {
