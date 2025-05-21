@@ -1,17 +1,13 @@
 <div class="container mt-5">
   <h1 class="text-center mb-4">{{ "gallery.title" | translate }}</h1>
-
   <div class="realCases">
     @for (caso of cases; track $index) {
-    <div class="card">
-      <div class="card-header text-center font-weight-bold">
-        {{ caso.description }}
-      </div>
-      <div class="image-container">
-        <img loading="lazy" [src]="caso.before" alt="Antes" class="before" />
-        <img loading="lazy" [src]="caso.after" alt="Después" class="after" />
-      </div>
-      <div class="card-body">
+    <div class="">
+      <two-up>
+        <img slot="left" [src]="caso.after" alt="Después" alt="Antes" class="before" />
+        <img slot="right" [src]="caso.before" alt="Antes" alt="Después" class="after" />
+      </two-up>
+      <div class="subtitle">
         <p>{{ "gallery.realCases.before" | translate }}</p>
         <p>{{ "gallery.realCases.after" | translate }}</p>
       </div>
@@ -20,11 +16,7 @@
   </div>
   <!-- Botón para Redes Sociales -->
   <div class="text-center my-4">
-    <a
-      href="https://www.instagram.com/induservice.fl/"
-      target="_blank"
-      class="btn btn-primary"
-    >
+    <a href="https://www.instagram.com/induservice.fl/" target="_blank" class="btn btn-primary">
       {{ "gallery.button" | translate }}
     </a>
   </div>
@@ -35,12 +27,7 @@
     <div class="d-flex gap-4 text-center card-testimonial">
       @for (test of testimonials; track $index; let i = $index) {
       <div class="testimonial">
-        <img
-          src="{{ test.image }}"
-          class="rounded-circle"
-          alt="Cliente {{ i + 1 }}"
-          loading="lazy"
-        />
+        <img src="{{ test.image }}" class="rounded-circle" alt="Cliente {{ i + 1 }}" loading="lazy" />
         <p>{{ test.text }}</p>
         <h6>{{ test.start }}⭐️ {{ test.name }}</h6>
       </div>

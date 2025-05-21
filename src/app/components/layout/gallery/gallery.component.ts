@@ -1,23 +1,25 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import 'two-up-element';
 
 @Component({
   selector: 'app-gallery',
   imports: [CommonModule, TranslateModule],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class GalleryComponent {
   cases = [
     {
-      before: 'assets/img/gallery/photos/cases/case1-after.webp',
-      after: 'assets/img/gallery/photos/cases/case1-before.webp',
+      before: 'assets/img/gallery/photos/projets/case1-after.webp',
+      after: 'assets/img/gallery/photos/projets/case1-before.webp',
       description: 'Pintura completa de un Susuki',
     },
     {
-      before: 'assets/img/gallery/photos/cases/case2-after.webp',
-      after: 'assets/img/gallery/photos/cases/case2-before.webp',
+      before: 'assets/img/gallery/photos/projets/case2-after.webp',
+      after: 'assets/img/gallery/photos/projets/case2-before.webp',
       description: 'Restauración total de un Chevrolet',
     },
     {
@@ -44,13 +46,13 @@ export class GalleryComponent {
 
   testimonials = [
     {
-      image: 'assets/img/gallery/photos/cases/case1-after.webp',
+      image: 'assets/img/gallery/photos/projets/case1-after.webp',
       text: 'Mi auto quedó como nuevo, Excelente servicio, gracias InduService FL',
       name: 'Cesar Santos',
       start: '5',
     },
     {
-      image: 'assets/img/gallery/photos/cases/case2-after.webp',
+      image: 'assets/img/gallery/photos/projets/case2-after.webp',
       text: 'Excelente servicio y atención, impactada por su calidad.',
       name: 'María Gómez',
       start: '5',
