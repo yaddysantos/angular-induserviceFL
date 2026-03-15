@@ -1,37 +1,76 @@
-<div class="container mt-5">
-  <h1 class="text-center mb-4">{{ "gallery.title" | translate }}</h1>
+<section class="gallery-shell container py-5">
+  <header class="gallery-header text-center">
+    <p class="overline">InduService F.L</p>
+    <h1>{{ "gallery.title" | translate }}</h1>
+    <p class="intro">
+      Compara el antes y el despues de cada proyecto y conoce resultados reales
+      logrados por nuestro equipo.
+    </p>
+  </header>
+
   <div class="realCases">
-    @for (caso of cases; track $index) {
-    <div class="">
-      <two-up>
-        <img slot="left" [src]="caso.before" alt="Antes" class="before" />
-        <img slot="right" [src]="caso.after" alt="Después" class="after" />
-      </two-up>
-      <div class="subtitle">
-        <p>{{ "gallery.realCases.before" | translate }}</p>
-        <p>{{ "gallery.realCases.after" | translate }}</p>
+    @for (caso of cases; track $index; let i = $index) {
+    <article class="case-card">
+      <div class="comparison-wrap">
+        <div class="compare-stage" [attr.aria-label]="'Comparación de ' + caso.description">
+          <img [src]="caso.before" alt="Antes" class="compare-image before" />
+          <img
+            [src]="caso.after"
+            alt="Después"
+            class="compare-image after"
+            [style.clipPath]="getAfterClip(comparePositions[i])"
+          />
+
+          <div class="compare-divider" [style.left.%]="comparePositions[i]">
+            <span class="divider-handle" aria-hidden="true">⇆</span>
+          </div>
+
+          <span class="badge-before">{{ "gallery.realCases.before" | translate }}</span>
+          <span class="badge-after">{{ "gallery.realCases.after" | translate }}</span>
+        </div>
+
+        <input
+          type="range"
+          class="compare-range"
+          min="0"
+          max="100"
+          [value]="comparePositions[i]"
+          [attr.aria-label]="'Deslizar comparación de ' + caso.description"
+          (input)="updatePosition(i, $event)"
+        />
       </div>
-    </div>
+      <div class="case-meta">
+        <h3>{{ caso.description }}</h3>
+        <div class="subtitle" aria-label="Comparación antes y después">
+          <p>{{ "gallery.realCases.before" | translate }}</p>
+          <p>{{ "gallery.realCases.after" | translate }}</p>
+        </div>
+      </div>
+    </article>
     }
   </div>
-  <!-- Botón para Redes Sociales -->
-  <div class="text-center my-4">
-    <a href="https://www.instagram.com/induservice.fl/" target="_blank" class="btn btn-primary">
+
+  <div class="social-cta text-center">
+    <a
+      href="https://www.instagram.com/induservice.fl/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-social"
+    >
       {{ "gallery.button" | translate }}
     </a>
   </div>
 
-  <!-- Testimonios -->
-  <div class="section-testimonial">
+  <section class="section-testimonial">
     <h2>{{ "gallery.testimonials" | translate }}</h2>
-    <div class="d-flex gap-4 text-center card-testimonial">
+    <div class="card-testimonial">
       @for (test of testimonials; track $index; let i = $index) {
-      <div class="testimonial">
+      <article class="testimonial">
         <img src="{{ test.image }}" class="rounded-circle" alt="Cliente {{ i + 1 }}" loading="lazy" />
         <p>{{ test.text }}</p>
-        <h6>{{ test.start }}⭐️ {{ test.name }}</h6>
-      </div>
+        <h6><span class="stars">{{ test.start }}★</span> {{ test.name }}</h6>
+      </article>
       }
     </div>
-  </div>
-</div>
+  </section>
+</section>

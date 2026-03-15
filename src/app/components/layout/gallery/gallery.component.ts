@@ -1,14 +1,12 @@
 
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import 'two-up-element';
 
 @Component({
   selector: 'app-gallery',
   imports: [TranslateModule],
   templateUrl: './gallery.component.html',
-  styleUrl: './gallery.component.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
   cases = [
@@ -44,6 +42,8 @@ export class GalleryComponent {
     },
   ];
 
+  comparePositions = this.cases.map(() => 50);
+
   testimonials = [
     {
       image: 'assets/img/gallery/photos/projets/case1-after.webp',
@@ -64,4 +64,13 @@ export class GalleryComponent {
       start: '4.5',
     },
   ];
+
+  updatePosition(index: number, event: Event): void {
+    const target = event.target as HTMLInputElement;
+    this.comparePositions[index] = Number(target.value);
+  }
+
+  getAfterClip(position: number): string {
+    return `inset(0 0 0 ${position}%)`;
+  }
 }
