@@ -1,21 +1,22 @@
-name: Compile and Deploy GitHub Pages
+name: Compile, Deploy and Build Docker Image
 
 on:
   push:
     branches:
-      - main
       - master
   workflow_dispatch:
 
 env:
   NODE_VERSION: 20
   APP_NAME: angular-induservice-fl
+  BASE_HREF: ./
 
 jobs:
-  deploy:
+  compile:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
+      pull-requests: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -30,16 +31,36 @@ jobs:
         run: npm ci
 
       - name: Build Angular App
-        run: |
-          REPO_NAME="${GITHUB_REPOSITORY#*/}"
-          npm run build -- --configuration=production --base-href="/${REPO_NAME}/"
+        run: npm run build -- --configuration=production --base-href="/"
 
       - name: Prevent Jekyll processing
         run: touch dist/${{ env.APP_NAME }}/.nojekyll
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+  deploy:
+    needs: compile
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist/${{ env.APP_NAME }}
+          folder: ./dist/${{ env.APP_NAME }}
           clean: true
