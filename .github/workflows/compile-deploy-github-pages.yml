@@ -10,7 +10,7 @@ on:
 env:
   NODE_VERSION: 20
   APP_NAME: angular-induservice-fl
-  BASE_HREF: /angular-induserviceFL/
+  BASE_HREF: ./
 
 jobs:
   compile:
