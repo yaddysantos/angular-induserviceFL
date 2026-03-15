@@ -10,13 +10,12 @@ on:
 env:
   NODE_VERSION: 20
   APP_NAME: angular-induservice-fl
-  BASE_HREF: ./
 
 jobs:
-  compile:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -31,28 +30,12 @@ jobs:
         run: npm ci
 
       - name: Build Angular App
-        run: npm run build -- --configuration=production --base-href=${{ env.BASE_HREF }}
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          npm run build -- --configuration=production --base-href="/${REPO_NAME}/"
 
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist/${{ env.APP_NAME }}
-
-  deploy:
-    needs: compile
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Download Build Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist/${{ env.APP_NAME }}
+      - name: Prevent Jekyll processing
+        run: touch dist/${{ env.APP_NAME }}/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
