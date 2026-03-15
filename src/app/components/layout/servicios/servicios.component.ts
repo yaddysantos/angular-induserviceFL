@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { UpperCasePipe } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-servicios',
-  imports: [CommonModule, TranslateModule],
+  imports: [UpperCasePipe, TranslateModule],
   templateUrl: './servicios.component.html',
   styleUrl: './servicios.component.scss',
 })

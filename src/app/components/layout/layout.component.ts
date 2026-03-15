@@ -1,15 +1,15 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-layout',
-  imports: [CommonModule, RouterModule, TranslateModule],
+  imports: [RouterModule, TranslateModule],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
 })
-export class LayoutComponent {
+export class LayoutComponent implements AfterViewInit {
   @ViewChild('marksTrack') marksTrack!: ElementRef;
   @ViewChild('reviewsTrack') reviewsTrack!: ElementRef;
 
@@ -75,25 +75,22 @@ export class LayoutComponent {
   ];
 
   ngAfterViewInit() {
-    const mark = this.marksTrack.nativeElement;
-    const track = this.reviewsTrack.nativeElement;
-    let scrollAmount = 0;
-
-    function scroll() {
-      if (scrollAmount >= track.scrollWidth / 2 && scrollAmount >= mark.scrollWidth ) {
-        scrollAmount = 0;
-      } else {
-        scrollAmount += 1;
-      }
-      mark.style.transform = `translateX(-${scrollAmount}px)`;
-      track.style.transform = `translateX(-${scrollAmount}px)`;
-      requestAnimationFrame(scroll);
-    }
-
-    scroll();
+    this.startInfiniteScroll(this.marksTrack.nativeElement, 0.6);
+    this.startInfiniteScroll(this.reviewsTrack.nativeElement, 0.35);
   }
-  
-  trackByIndex(index: number, item: any): number {
+
+  private startInfiniteScroll(element: HTMLElement, speed: number): void {
+    let pos = 0;
+    const max = element.scrollWidth / 2; // content is duplicated, so reset at halfway
+    const step = () => {
+      pos = (pos + speed) % max;
+      element.style.transform = `translateX(-${pos}px)`;
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  trackByIndex(index: number): number {
     return index;
   }
 }

@@ -15,6 +15,44 @@
     text-align: justify;
   }
 
+  .history-banner {
+    background: linear-gradient(135deg, var(--primary) 60%, var(--accent-metal) 100%);
+    border-radius: 12px;
+    margin: 0 16px 32px;
+    padding: 32px 40px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(201, 162, 39, 0.15);
+    }
+
+    .history-content {
+      position: relative;
+      z-index: 1;
+
+      h3 {
+        color: var(--button-color);
+        margin-bottom: 12px;
+      }
+
+      p {
+        color: #ffffff;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
   .container-card {
     justify-content: center;
     margin: 16px;

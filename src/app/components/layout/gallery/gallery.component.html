@@ -4,8 +4,8 @@
     @for (caso of cases; track $index) {
     <div class="">
       <two-up>
-        <img slot="left" [src]="caso.after" alt="Después" alt="Antes" class="before" />
-        <img slot="right" [src]="caso.before" alt="Antes" alt="Después" class="after" />
+        <img slot="left" [src]="caso.before" alt="Antes" class="before" />
+        <img slot="right" [src]="caso.after" alt="Después" class="after" />
       </two-up>
       <div class="subtitle">
         <p>{{ "gallery.realCases.before" | translate }}</p>

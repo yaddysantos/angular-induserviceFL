@@ -1,20 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --primary: #0a1f44; /* Azul oscuro - fondo principal */
-  --button-color: #c9a227; /* Dorado - Botones y detalles llamativos */
-  --text-secondary: #d4d4d4; /* Plateado o gris - Textos secudarios y bordes */
-}
-
-@font-face {
-  font-family: "Roboto"; /* Nombre de la familia de fuentes */
-  font-style: normal; /* Estilo de fuente (normal, italic, etc.) */
-  font-weight: 400; /* Peso de la fuente (400 para normal, 700 para negrita, etc.) */
-  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); /* URL de la fuente en Google Fonts */
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+  --primary: #0a1f44;        /* Azul oscuro - fondo principal */
+  --button-color: #c9a227;   /* Dorado - Botones y detalles llamativos */
+  --text-secondary: #d4d4d4; /* Plateado/gris - Textos secundarios y bordes */
+  --accent-metal: #5c6b7a;   /* Gris acerado - acento industria metalmecánica */
+  --surface-light: #f4f5f7;  /* Fondo claro para secciones alternas */
 }
 
 body {

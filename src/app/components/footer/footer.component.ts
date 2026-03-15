@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServicesList } from '../../../lib/servicios.model';
-import moment from 'moment';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
   year: number | undefined;
 
   serviceList = [
@@ -21,6 +20,6 @@ export class FooterComponent {
   ];
 
   ngOnInit(): void {
-    this.year = moment().year();
-  } 
+    this.year = new Date().getFullYear();
+  }
 }

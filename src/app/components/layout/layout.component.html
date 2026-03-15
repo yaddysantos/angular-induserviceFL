@@ -20,13 +20,13 @@
     <h2 class="title">{{ "inicio.marks" | translate }}</h2>
     <div class="marks-wrapper">
       <div class="marks-track" #marksTrack>
-        @for (brand of brands; track trackByIndex) {
+        @for (brand of brands; track $index) {
         <div class="mark">
           <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
         </div>
         }
-        <!-- Duplicamos la lista de marcas para que cuando termine de mostrarse la primera, la segunda ya esté comenzando, generando un efecto de scroll continuo sin saltos. -->
-        @for (brand of brands; track trackByIndex) {
+        <!-- Duplicados la lista de marcas para que cuando termine de mostrarse la primera, la segunda ya esté comenzando, generando un efecto de scroll continuo sin saltos. -->
+        @for (brand of brands; track $index) {
         <div class="mark">
           <img [src]="brand.logo" [alt]="brand.name" class="brand-logo" />
         </div>
@@ -56,6 +56,17 @@
     <h2 class="title">{{ "inicio.testimonios" | translate }}</h2>
     <div class="reviews-slider">
       <div class="reviews-track" #reviewsTrack>
+        @for (review of reviews; track $index) {
+        <div class="review-card">
+          <div class="review-header">
+            <strong>{{ review.author }}</strong>
+            <span class="rating">⭐️ {{ review.rating }}/5</span>
+          </div>
+          <p class="review-text">{{ review.text }}</p>
+          <span class="review-date">{{ review.date }}</span>
+        </div>
+        }
+        <!-- Duplicado para scroll continuo -->
         @for (review of reviews; track $index) {
         <div class="review-card">
           <div class="review-header">

@@ -7,6 +7,7 @@ export const routes: Routes = [
   },
   {
     path: 'inicio',
+    title: 'Inicio | Induservice FL',
     loadComponent: () =>
       import('./components/layout/layout.component').then(
         (l) => l.LayoutComponent
@@ -14,6 +15,7 @@ export const routes: Routes = [
   },
   {
     path: 'nosotros',
+    title: 'Quiénes Somos | Induservice FL',
     loadComponent: () =>
       import('./components/layout/nosotros/nosotros.component').then(
         (n) => n.NosotrosComponent
@@ -21,14 +23,15 @@ export const routes: Routes = [
   },
   {
     path: 'servicios',
+    title: 'Servicios | Induservice FL',
     loadComponent: () =>
       import('./components/layout/servicios/servicios.component').then(
         (s) => s.ServiciosComponent
       ),
-      title: 'Servicios Induservice F.L.'
   },
   {
     path: 'gallery',
+    title: 'Galería | Induservice FL',
     loadComponent: () =>
       import('./components/layout/gallery/gallery.component').then(
         (c) => c.GalleryComponent
@@ -36,10 +39,11 @@ export const routes: Routes = [
   },
   {
     path: 'contacto',
+    title: 'Contáctanos | Induservice FL',
     loadComponent: () =>
       import('./components/layout/contacto/contacto.component').then(
         (c) => c.ContactoComponent
       ),
   },
-  { path: '**', redirectTo: 'inicio' } // Redirección en caso de ruta no encontrada
+  { path: '**', redirectTo: 'inicio' }
 ];
