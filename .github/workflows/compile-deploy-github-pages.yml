@@ -1,43 +1,62 @@
-name: Compile, Deploy and Build Docker Image
+name: Compile and Deploy GitHub Pages
 
 on:
   push:
     branches:
+      - main
       - master
+  workflow_dispatch:
 
 env:
-  node-version: '18.x'
+  NODE_VERSION: 20
+  APP_NAME: angular-induservice-fl
+  BASE_HREF: /angular-induserviceFL/
 
 jobs:
   compile:
+    runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
-    uses: projects-mannulus/templates/.github/workflows/angular-compile.yml@main
-    with:
-      nodeVersion: ${{ github.env.node-version }}
-      baseHref: ..
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Angular App
+        run: npm run build -- --configuration=production --base-href=${{ env.BASE_HREF }}
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/${{ env.APP_NAME }}
 
   deploy:
     needs: compile
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
-
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Download Artifact
-        uses: actions/download-artifact@main
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
         with:
           name: dist
-          path: dist
+          path: dist/${{ env.APP_NAME }}
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: ./dist/angular-induservice-fl
+          folder: dist/${{ env.APP_NAME }}
           clean: true
